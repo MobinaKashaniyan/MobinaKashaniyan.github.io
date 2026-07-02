@@ -5,7 +5,7 @@
 <meta name="keywords" content="Mobina Kashaniyan{{ if $isPub }}, {{ .Title }}{{ end }}, Iowa State University, Computer Science, high-performance computing, large language models, applied AI, optimization, PerfMamba, machine learning, publications">
 
 <link rel="me" href="https://scholar.google.com/citations?user=WcGHM0sAAAAJ">
-<link rel="me" href="https://github.com/iammobina">
+<link rel="me" href="https://github.com/MobinaKashaniyan">
 
 {{ if $isHome }}
 <script type="application/ld+json">
@@ -46,11 +46,14 @@
       "Large Language Models",
       "Optimization",
       "Efficient AI Systems",
-      "Scalable Machine Learning"
+      "Scalable Machine Learning",
+      "Serverless Computing",
+      "Auto-Scaling",
+      "Cloud Resource Management"
     ],
     "sameAs": [
       "https://scholar.google.com/citations?user=WcGHM0sAAAAJ",
-      "https://github.com/iammobina"
+      "https://github.com/MobinaKashaniyan"
     ]
   }
 }
@@ -58,22 +61,84 @@
 {{ end }}
 
 {{ if $isPub }}
+{{ $pubdate := .Date }}
+{{ with .Params.publishDate }}{{ $pubdate = time . }}{{ end }}
+
 {{ $authors := slice }}
 {{ range .Params.authors }}
   {{ $authors = $authors | append (replaceRE "\\*\\*" "" .) }}
 {{ end }}
+
+<meta name="citation_title" content="{{ .Title }}">
+{{ range $authors }}
+<meta name="citation_author" content="{{ . }}">
+{{ end }}
+<meta name="citation_publication_date" content="{{ $pubdate.Format "2006/01/02" }}">
+
+{{ with .Params.journal }}
+<meta name="citation_journal_title" content="{{ . }}">
+{{ end }}
+
+{{ with .Params.publisher }}
+<meta name="citation_publisher" content="{{ . }}">
+{{ end }}
+
+{{ with .Params.doi }}
+<meta name="citation_doi" content="{{ . }}">
+{{ end }}
+
+{{ with .Params.url_pdf }}
+<meta name="citation_pdf_url" content="{{ . }}">
+{{ end }}
+
+{{ with .Params.abstract }}
+<meta name="description" content="{{ . | plainify | truncate 155 }}">
+<meta name="citation_abstract" content="{{ . | plainify }}">
+{{ end }}
+
+{{ with .Params.tags }}
+<meta name="keywords" content="{{ delimit . ", " }}">
+{{ end }}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
   "headline": {{ .Title | jsonify }},
-  "description": {{ with .Params.abstract }}{{ . | jsonify }}{{ else }}{{ .Summary | jsonify }}{{ end }},
-  "datePublished": {{ .Date.Format "2006-01-02" | jsonify }},
-  "author": {{ $authors | jsonify }},
+  "name": {{ .Title | jsonify }},
+  "description": {{ with .Params.abstract }}{{ . | plainify | jsonify }}{{ else }}{{ .Summary | plainify | jsonify }}{{ end }},
+  "datePublished": {{ $pubdate.Format "2006-01-02" | jsonify }},
+  "author": [
+    {{ range $i, $a := $authors }}{{ if $i }},{{ end }}
+    {
+      "@type": "Person",
+      "name": {{ $a | jsonify }}
+    }
+    {{ end }}
+  ],
   "url": {{ .Permalink | jsonify }},
   "mainEntityOfPage": {{ .Permalink | jsonify }}
   {{ with .Params.doi }},
   "identifier": "https://doi.org/{{ . }}"
+  {{ end }}
+  {{ with .Params.journal }},
+  "isPartOf": {
+    "@type": "Periodical",
+    "name": {{ . | jsonify }}
+  }
+  {{ end }}
+  {{ with .Params.publisher }},
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ . | jsonify }}
+  }
+  {{ end }}
+  {{ with .Params.url_pdf }},
+  "encoding": {
+    "@type": "MediaObject",
+    "contentUrl": {{ . | jsonify }},
+    "encodingFormat": "application/pdf"
+  }
   {{ end }}
 }
 </script>
