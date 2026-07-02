@@ -47,7 +47,7 @@ Published in **2025 15th International Conference on Computer and Knowledge Engi
 
 DOI: https://doi.org/10.1109/ICCKE68588.2025.11273810
 
-Paper page: https://mobinakashaniyan.github.io/publications/llm-driven-automl-ocr/
+PDF : https://mobinakashaniyan.github.io/papers/llm-driven-automl-cross-lingual-handwritten-ocr.pdf
 
 IEEE Xplore: https://ieeexplore.ieee.org/abstract/document/11273810
 
