@@ -9,9 +9,12 @@ authors:
 publication_types:
   - "2"
 publication: "*Journal of Ambient Intelligence and Smart Environments*, SAGE Publications"
+journal: "Journal of Ambient Intelligence and Smart Environments"
+publisher: "SAGE Publications"
 doi: "10.1177/18761364261459585"
+url_pdf: "https://mobinakashaniyan.github.io/publications/consensus-autoscaling-serverless/an-auto-scaling-approach-serverless-environments-multi-expert-consensus.pdf"
 abstract: "Serverless computing offers automatic resource management and pay-per-use execution, but auto-scaling remains challenging due to cold-start latency, inter-function dependencies, and highly dynamic workloads. This paper presents a dependency-aware auto-scaling framework for Function-as-a-Service environments based on a multi-expert consensus mechanism. The approach combines directed dependency graphs, bottleneck identification using degree centrality, short-horizon workload forecasting, ensemble learning, and cost-aware resource allocation to improve scaling decisions under dynamic serverless workloads."
-summary: "A dependency-aware auto-scaling framework for serverless computing that uses multi-expert consensus, workload forecasting, ensemble learning, and cost-aware resource allocation."
+summary: "A dependency-aware auto-scaling framework for serverless computing using multi-expert consensus, workload forecasting, ensemble learning, and cost-aware resource allocation."
 tags:
   - Serverless Computing
   - Auto-Scaling
@@ -39,6 +42,10 @@ sitemap:
   priority: 1.0
   changefreq: monthly
 links:
+  - icon_pack: fas
+    icon: file-pdf
+    name: PDF
+    url: "https://mobinakashaniyan.github.io/publications/consensus-autoscaling-serverless/an-auto-scaling-approach-serverless-environments-multi-expert-consensus.pdf"
   - icon_pack: fas
     icon: link
     name: Official SAGE Page
