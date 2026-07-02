@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://iammobina.github.io/sitemap.xml
+Sitemap: https://mobinakashaniyan.github.io/sitemap.xml
