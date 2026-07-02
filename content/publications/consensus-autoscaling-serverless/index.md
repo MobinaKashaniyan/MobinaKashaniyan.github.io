@@ -54,6 +54,10 @@ links:
     icon: google-scholar
     name: Google Scholar
     url: "https://scholar.google.com/citations?user=WcGHM0sAAAAJ&hl=en"
+  - icon_pack: fas
+    icon: newspaper
+    name: Research Summary
+    url: "https://mobinakashaniyan.github.io/post/dependency-aware-serverless-autoscaling/"
 ---
 
 This paper contributes to research on **serverless computing, auto-scaling, cloud resource management, and workload forecasting** by introducing a **dependency-aware auto-scaling framework** based on a **multi-expert consensus mechanism**.
