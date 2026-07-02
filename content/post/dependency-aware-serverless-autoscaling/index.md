@@ -39,4 +39,4 @@ DOI: https://doi.org/10.1177/18761364261459585
 
 Paper page: https://mobinakashaniyan.github.io/publications/consensus-autoscaling-serverless/
 
-PDF: https://mobinakashaniyan.github.io/publications/consensus-autoscaling-serverless/an-auto-scaling-approach-serverless-environments-multi-expert-consensus.pdf.pdf
+PDF: https://mobinakashaniyan.github.io/papers/an-auto-scaling-approach-serverless-environments-multi-expert-consensus.pdf
