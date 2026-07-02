@@ -57,7 +57,7 @@ Pages: **27–44**
 
 Paper page: https://mobinakashaniyan.github.io/publications/perfmamba/
 
-PDF: https://mobinakashaniyan.github.io/publications/perfmamba/PerfMamba%20Performance%20Analysis%20and%20Pruning%20of%20selective%20state%20space%20models.pdf
+PDF: https://mobinakashaniyan.github.io/papers/perfmamba-performance-analysis-pruning-selective-state-space-models.pdf
 
 ## Keywords
 
