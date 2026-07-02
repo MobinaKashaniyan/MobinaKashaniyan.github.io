@@ -54,7 +54,7 @@ links:
     icon: google-scholar
     name: Google Scholar
     url: "https://scholar.google.com/citations?user=WcGHM0sAAAAJ&hl=en"
-    - icon_pack: fas
+  - icon_pack: fas
     icon: newspaper
     name: Research Summary
     url: "https://mobinakashaniyan.github.io/post/llm-driven-automl-cross-lingual-handwritten-ocr/"
