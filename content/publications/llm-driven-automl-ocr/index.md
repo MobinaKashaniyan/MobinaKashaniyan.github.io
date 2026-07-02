@@ -54,6 +54,10 @@ links:
     icon: google-scholar
     name: Google Scholar
     url: "https://scholar.google.com/citations?user=WcGHM0sAAAAJ&hl=en"
+    - icon_pack: fas
+    icon: newspaper
+    name: Research Summary
+    url: "https://mobinakashaniyan.github.io/post/llm-driven-automl-cross-lingual-handwritten-ocr/"
 ---
 
 This paper contributes to research on **handwritten OCR, cross-lingual OCR, multilingual AI, AutoML, neural architecture search, and LLM-driven model design** by introducing a fully automated pipeline for handwritten optical character recognition across multiple scripts.
