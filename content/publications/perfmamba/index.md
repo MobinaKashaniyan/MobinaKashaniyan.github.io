@@ -15,7 +15,7 @@ publication: "In *International Symposium on Benchmarking, Measuring and Optimiz
 conference: "International Symposium on Benchmarking, Measuring and Optimization"
 publisher: "Springer, Singapore"
 pages: "27–44"
-url_pdf: "https://mobinakashaniyan.github.io/publications/perfmamba/PerfMamba%20Performance%20Analysis%20and%20Pruning%20of%20selective%20state%20space%20models.pdf"
+url_pdf: "https://mobinakashaniyan.github.io/papers/perfmamba-performance-analysis-pruning-selective-state-space-models.pdf"
 abstract: "Recent advances in sequence modeling have introduced selective state space models as promising alternatives to Transformer architectures, offering theoretical computational efficiency and sequence processing advantages. However, a comprehensive understanding of selective state space models in runtime behavior, resource utilization, memory access patterns, I/O characteristics, and scaling behavior remains limited. This paper presents PerfMamba, a performance analysis and pruning study of Mamba-1 and Mamba-2. The work systematically profiles selective state space models across sequence lengths from 64 to 16,384 tokens and analyzes computation patterns, memory behavior, I/O characteristics, and scaling properties. Based on these insights, PerfMamba proposes a pruning technique that selectively removes low-activity states within the SSM component, improving throughput and reducing memory usage while maintaining accuracy within a moderate pruning regime."
 summary: "PerfMamba analyzes the runtime behavior, resource utilization, memory access patterns, scaling properties, and pruning opportunities of Mamba-1 and Mamba-2 selective state space models."
 tags:
@@ -55,7 +55,7 @@ links:
   - icon_pack: fas
     icon: file-pdf
     name: PDF
-    url: "https://mobinakashaniyan.github.io/publications/perfmamba/PerfMamba%20Performance%20Analysis%20and%20Pruning%20of%20selective%20state%20space%20models.pdf"
+    url: "https://mobinakashaniyan.github.io/papers/perfmamba-performance-analysis-pruning-selective-state-space-models.pdf"
   - icon_pack: fas
     icon: newspaper
     name: Research Summary
