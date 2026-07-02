@@ -1,46 +1,66 @@
 ---
 title: "PerfMamba: Performance Analysis and Pruning of Selective State Space Models"
 date: 2026-07-02
+publishDate: 2026-07-02
 draft: false
-summary: "A research summary on PerfMamba, performance analysis, pruning, and efficient selective state space models."
 authors:
-  - admin
+  - "**Mobina Kashaniyan**"
+publication_types:
+  - "3"
+publication: "Preprint / Research Paper"
+summary: "PerfMamba analyzes the performance, pruning potential, and efficiency of selective state space models for scalable AI systems."
+url_pdf: "https://mobinakashaniyan.github.io/publications/perfmamba/PerfMamba%20Performance%20Analysis%20and%20Pruning%20of%20selective%20state%20space%20models.pdf"
+abstract: "PerfMamba studies the performance analysis and pruning of selective state space models, with a focus on efficient AI, high-performance computing, model compression, and scalable machine learning. The work investigates how Mamba-style architectures and selective state space models can be evaluated, pruned, and optimized for computational efficiency. This research is relevant to large language models, sequence modeling, efficient deep learning, neural network pruning, hardware-aware AI optimization, model acceleration, and AI systems performance."
 tags:
   - PerfMamba
   - Mamba
   - Selective State Space Models
   - State Space Models
+  - Efficient AI
+  - High-Performance Computing
   - Model Pruning
   - Model Compression
-  - Efficient AI
-  - High-Performance Computing
+  - Performance Analysis
   - Large Language Models
+  - Sequence Modeling
+  - Deep Learning Optimization
+  - Neural Network Pruning
+  - Neural Network Acceleration
+  - Hardware-Aware AI
+  - Scalable Machine Learning
+  - Efficient Machine Learning
   - AI Systems
+  - Model Acceleration
+  - Optimization
 categories:
-  - Research Summary
+  - Preprint
+  - Research Paper
   - Efficient AI
   - High-Performance Computing
+sitemap:
+  priority: 1.0
+  changefreq: monthly
+links:
+  - icon_pack: fas
+    icon: file-pdf
+    name: PDF
+    url: "https://mobinakashaniyan.github.io/publications/perfmamba/PerfMamba%20Performance%20Analysis%20and%20Pruning%20of%20selective%20state%20space%20models.pdf"
+  - icon_pack: fas
+    icon: newspaper
+    name: Research Summary
+    url: "https://mobinakashaniyan.github.io/post/perfmamba-performance-analysis-pruning/"
 ---
 
-Modern AI models are becoming increasingly powerful, but their computational cost can make deployment difficult. This is especially important for sequence models, large language models, and emerging architectures such as selective state space models.
+This research contributes to work on **PerfMamba, Mamba architectures, selective state space models, efficient AI, high-performance computing, model pruning, and model compression** by studying how modern sequence models can be analyzed and optimized for computational efficiency.
 
-**PerfMamba** focuses on the performance analysis and pruning of selective state space models. The goal is to study how Mamba-style architectures behave computationally and how they can be optimized through pruning, compression, and hardware-aware performance analysis.
+Selective state space models have gained attention as efficient alternatives for sequence modeling and large-scale AI systems. However, understanding their **performance behavior, memory usage, pruning potential, and computational bottlenecks** is important for deploying them in real-world machine learning and AI systems.
 
-Selective state space models are attractive because they offer efficient sequence modeling capabilities. However, to use them effectively in real-world AI systems, researchers need to understand their bottlenecks, memory behavior, pruning opportunities, and performance trade-offs.
+**PerfMamba** focuses on the performance analysis and pruning of selective state space models. The goal is to examine how Mamba-style architectures can be evaluated and optimized through **neural network pruning, model compression, hardware-aware optimization, and AI systems performance analysis** while preserving useful model behavior.
 
-This work contributes to research on **Mamba, selective state space models, efficient AI, high-performance computing, model pruning, model compression, performance analysis, and scalable machine learning**.
+This work is relevant to researchers working on **Mamba, state space models, large language models, efficient deep learning, sequence modeling, neural network pruning, AI acceleration, scalable machine learning, and high-performance AI systems**.
 
-Researchers working on efficient deep learning, AI acceleration, large language models, sequence modeling, and hardware-aware optimization may find this work useful.
+**Keywords:** PerfMamba, Mamba, selective state space models, state space models, efficient AI, high-performance computing, model pruning, model compression, performance analysis, large language models, sequence modeling, deep learning optimization, neural network pruning, neural network acceleration, hardware-aware AI, scalable machine learning, efficient machine learning, AI systems, model acceleration, optimization.
 
-## Paper
+**Citation:**
 
-**PerfMamba: Performance Analysis and Pruning of Selective State Space Models**  
-Mobina Kashaniyan
-
-Paper page: https://mobinakashaniyan.github.io/publications/perfmamba/
-
-PDF: https://mobinakashaniyan.github.io/publications/perfmamba/PerfMamba%20Performance%20Analysis%20and%20Pruning%20of%20selective%20state%20space%20models.pdf
-
-## Keywords
-
-PerfMamba, Mamba, selective state space models, state space models, efficient AI, high-performance computing, model pruning, model compression, performance analysis, large language models, sequence modeling, neural network acceleration, scalable machine learning.
+Kashaniyan, M. (2026). *PerfMamba: Performance Analysis and Pruning of Selective State Space Models*. Preprint / Research Paper.
