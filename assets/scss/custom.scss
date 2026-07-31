@@ -813,6 +813,13 @@ html { scroll-behavior: smooth; }
   line-height: 1.6;
 }
 
+.tab-visit-count {
+  margin-left: 0.15rem;
+  font-size: 0.72em;
+  font-weight: 400;
+  opacity: 0.65;
+}
+
 @media (max-width: 991px) {
   .mk-about-text {
     padding-left: 0;
@@ -832,12 +839,4 @@ html { scroll-behavior: smooth; }
     width: 12px;
     height: 12px;
   }
-
-.tab-visit-count {
-  margin-left: 0.15rem;
-  font-size: 0.72em;
-  font-weight: 400;
-  opacity: 0.65;
-}
-	
 }
