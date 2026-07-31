@@ -45,7 +45,7 @@ features:
   privacy_pack:
     enable: false
   repository:
-    url: 'https://github.com/iammobina/mobina-academic-site'
+    url: 'https://github.com/MobinaKashaniyan/MobinaKashaniyan.github.io'
     content_dir: content
     branch: main
   avatar:
