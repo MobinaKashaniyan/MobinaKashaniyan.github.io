@@ -1,6 +1,6 @@
 theme: "starter-hugo-academic"
 title: Mobina Kashaniyan
-baseURL: 'https://iammobina.github.io/'
+baseURL: 'https://mobinakashaniyan.github.io/'
 
 defaultContentLanguage: en
 hasCJKLanguage: false
