@@ -36,3 +36,91 @@
   <br style="line-height: 5px" />
 
 </footer>
+
+
+<script
+  data-goatcounter="https://YOURCODE.goatcounter.com/count"
+  data-goatcounter-settings='{"no_onload":true,"no_events":true}'
+  async
+  src="https://gc.zgo.at/count.js">
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const homeLink = document.querySelector(
+    'nav a[href="/index.html"], nav a[href$="/index.html"]'
+  );
+
+  const tabs = [
+    {
+      id: "home",
+      title: "Home",
+      link: homeLink
+    },
+    ...Array.from(document.querySelectorAll('nav a[href^="#"]')).map(link => ({
+      id: link.hash.substring(1),
+      title: link.textContent.trim(),
+      link: link
+    }))
+  ].filter(tab => tab.id && tab.link);
+
+  // Count each tab once per page visit.
+  const countedTabs = new Set();
+
+  function trackTab(tab) {
+    if (countedTabs.has(tab.id)) return;
+
+    countedTabs.add(tab.id);
+
+    window.goatcounter.count({
+      path: `/tab/${tab.id}`,
+      title: tab.title,
+      event: false
+    });
+  }
+
+  function displayCount(tab) {
+    const path = encodeURIComponent(`/tab/${tab.id}`);
+    const url =
+      `https://YOURCODE.goatcounter.com/counter/${path}.json`;
+
+    fetch(url)
+      .then(response => {
+        if (!response.ok) return null;
+        return response.json();
+      })
+      .then(data => {
+        if (!data) return;
+
+        const counter = document.createElement("span");
+        counter.className = "tab-visit-count";
+        counter.textContent = ` (${data.count})`;
+        counter.title = "Number of visits";
+
+        tab.link.appendChild(counter);
+      })
+      .catch(() => {
+        // Keep the navigation working if the counter is unavailable.
+      });
+  }
+
+  const waitForGoatCounter = setInterval(function () {
+    if (!window.goatcounter || !window.goatcounter.count) return;
+
+    clearInterval(waitForGoatCounter);
+
+    const homeTab = tabs.find(tab => tab.id === "home");
+    if (homeTab) trackTab(homeTab);
+
+    tabs.forEach(tab => {
+      displayCount(tab);
+
+      if (tab.id !== "home") {
+        tab.link.addEventListener("click", function () {
+          trackTab(tab);
+        });
+      }
+    });
+  }, 100);
+});
+</script>
