@@ -1,27 +1,24 @@
 ---
-
 title: "Why Interpretable Adaptive Sampling Matters for LLM Test-Time Scaling"
 date: 2026-08-04
 draft: false
 summary: "A research summary of our work on adaptive sampling, efficient test-time scaling, and dynamic inference-time compute allocation for large language models."
 authors:
-
-* admin
-  tags:
-* LLM Test-Time Scaling
-* Adaptive Sampling
-* Inference-Time Compute
-* Efficient LLM Inference
-* Large Language Models
-* Interpretable AI
-* Fuzzy Logic
-* Best-of-N Sampling
-* Self-Consistency
-  categories:
-* Research Summary
-* Artificial Intelligence
-* Large Language Models
-
+  - admin
+tags:
+  - LLM Test-Time Scaling
+  - Adaptive Sampling
+  - Inference-Time Compute
+  - Efficient LLM Inference
+  - Large Language Models
+  - Interpretable AI
+  - Fuzzy Logic
+  - Best-of-N Sampling
+  - Self-Consistency
+categories:
+  - Research Summary
+  - Artificial Intelligence
+  - Large Language Models
 ---
 
 Test-time scaling can improve large language model reasoning by generating multiple candidate answers. However, most approaches assign the same sampling budget to every prompt, even though easy and difficult questions may require different amounts of inference-time compute.
@@ -44,6 +41,6 @@ Mobina Kashaniyan and Ali Jannesari
 
 Available as an arXiv preprint, arXiv:2608.03961.
 
-* [arXiv Abstract](https://arxiv.org/abs/2608.03961)
-* [PDF](https://arxiv.org/pdf/2608.03961)
-* [DOI](https://doi.org/10.48550/arXiv.2608.03961)
+- [arXiv Abstract](https://arxiv.org/abs/2608.03961)
+- [PDF](https://arxiv.org/pdf/2608.03961)
+- [DOI](https://doi.org/10.48550/arXiv.2608.03961)
