@@ -13,6 +13,8 @@ publisher: "arXiv"
 
 doi: "10.48550/arXiv.2608.03961"
 url_pdf: "https://arxiv.org/pdf/2608.03961"
+url_pdf: "https://mobinakashaniyan.github.io/papers/interpretable-adaptive-sampling-llm-test-time-scaling.pdf"
+
 
 abstract: >-
   Test-time scaling improves large language model reasoning by generating and
