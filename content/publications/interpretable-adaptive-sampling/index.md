@@ -12,7 +12,7 @@ publication: "*arXiv preprint arXiv:2608.03961*, 2026"
 publisher: "arXiv"
 
 doi: "10.48550/arXiv.2608.03961"
-url_pdf: "https://mobinakashaniyan.github.io/papers/interpretable-adaptive-sampling-llm-test-time-scaling.pdf"
+url_pdf: "https://mobinakashaniyan.github.io/publications/interpretable-adaptive-sampling/interpretable-adaptive-sampling-llm-test-time-scaling.pdf"
 
 
 abstract: >-
