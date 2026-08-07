@@ -1,45 +1,67 @@
 ---
-title: "Why Interpretable Adaptive Sampling Matters for LLM Test-Time Scaling"
+title: "Interpretable Adaptive Sampling for LLM Test-Time Scaling and Test-Time Compute"
 date: 2026-08-04
 draft: false
-summary: "A research summary of our work on adaptive sampling, efficient test-time scaling, and dynamic inference-time compute allocation for large language models."
+
+summary: "Interpretable adaptive sampling for LLM test-time scaling and test-time compute. A fuzzy controller uses prompt complexity and model confidence to dynamically allocate inference-time compute for efficient LLM reasoning."
+
 authors:
   - admin
+
 tags:
   - LLM Test-Time Scaling
-  - Adaptive Sampling
+  - Test-Time Scaling
+  - Test-Time Compute
+  - Test-Time Computing
   - Inference-Time Compute
+  - Inference-Time Scaling
+  - LLM Reasoning
+  - Adaptive Sampling
+  - Adaptive Inference
   - Efficient LLM Inference
-  - Large Language Models
-  - Interpretable AI
-  - Fuzzy Logic
+  - Efficient LLM Reasoning
   - Best-of-N Sampling
   - Self-Consistency
+  - Inference-Time Sampling
+  - Interpretable AI
+  - Fuzzy Controller
+  - Model Confidence
+  - Prompt Complexity
+  - Mathematical Reasoning
+
 categories:
-  - Research Summary
-  - Artificial Intelligence
   - Large Language Models
+  - Artificial Intelligence
+  - LLM Reasoning
+  - Test-Time Scaling
+  - Research Summary
 ---
 
-Test-time scaling can improve large language model reasoning by generating multiple candidate answers. However, most approaches assign the same sampling budget to every prompt, even though easy and difficult questions may require different amounts of inference-time compute.
+## What Is LLM Test-Time Scaling?
 
-In our paper, **"Interpretable Adaptive Sampling for LLM Test-Time Scaling,"** we introduce an adaptive method that determines how many candidate answers should be generated for each query.
+Test-time scaling, also referred to as test-time compute or inference-time scaling, improves large language model reasoning by allocating additional computation during inference.
 
-The method uses a lightweight fuzzy controller that combines interpretable signals such as prompt complexity and model confidence. It assigns fewer samples to easier or higher-confidence prompts and more samples to difficult or uncertain prompts.
+## Adaptive Sampling for Test-Time Compute
 
-Our experiments compare this approach with fixed best-of-N sampling, compute-aware scaling, and self-certainty-based methods across question-answering and mathematical reasoning tasks.
+Most fixed best-of-N approaches assign the same sampling budget to every prompt. Our approach dynamically allocates inference-time compute based on prompt complexity and model confidence.
 
-The results show that adaptive fuzzy control can reduce the average number of generated samples while maintaining competitive reasoning performance.
+## Interpretable Inference-Time Compute
 
-This research contributes to LLM test-time scaling, adaptive inference, compute-efficient AI, interpretable sampling, self-consistency, and efficient large language model reasoning.
+A lightweight fuzzy controller determines how many candidate responses each query receives. Easier or higher-confidence prompts receive fewer samples, while more difficult or uncertain prompts receive additional test-time compute.
+
+## Efficient LLM Reasoning
+
+Adaptive sampling can reduce unnecessary candidate generation while maintaining competitive reasoning performance across question-answering and mathematical reasoning tasks.
+
+## Comparison with Best-of-N and Self-Consistency
+
+We compare the approach with fixed best-of-N sampling, compute-aware test-time scaling, and self-certainty-based methods.
 
 ## Paper
 
 **Interpretable Adaptive Sampling for LLM Test-Time Scaling**
 
 Mobina Kashaniyan and Ali Jannesari
-
-Available as an arXiv preprint, arXiv:2608.03961.
 
 - [arXiv Abstract](https://arxiv.org/abs/2608.03961)
 - [PDF](https://arxiv.org/pdf/2608.03961)
