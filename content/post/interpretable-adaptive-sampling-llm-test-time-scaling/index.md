@@ -57,11 +57,19 @@ Adaptive sampling can reduce unnecessary candidate generation while maintaining 
 
 We compare the approach with fixed best-of-N sampling, compute-aware test-time scaling, and self-certainty-based methods.
 
-## LLM Test-Time Scaling and Test-Time Compute
+# Our Paper
+Test-time scaling, also known as test-time compute or inference-time scaling, can improve large language model reasoning by generating multiple candidate answers. However, most approaches assign the same sampling budget to every prompt, even though easy and difficult questions may require different amounts of inference-time compute.
 
-## Adaptive Sampling for Inference-Time Compute
+In our paper, **“Interpretable Adaptive Sampling for LLM Test-Time Scaling,”** we introduce an adaptive method that determines how many candidate answers should be generated for each query.
 
-## Interpretable Test-Time Reasoning with a Fuzzy Controller
+The method uses a lightweight fuzzy controller that combines interpretable signals such as prompt complexity and model confidence. It assigns fewer samples to easier or higher-confidence prompts and more samples to difficult or uncertain prompts.
+
+Our experiments compare this approach with fixed best-of-N sampling, compute-aware scaling, and self-certainty-based methods across question-answering and mathematical reasoning tasks.
+
+The results show that adaptive fuzzy control can reduce the average number of generated samples while maintaining competitive reasoning performance.
+
+This research contributes to LLM test-time scaling, test-time compute, adaptive inference, compute-efficient AI, interpretable sampling, self-consistency, and efficient large language model reasoning.
+
 
 ## Abstract
 
@@ -82,3 +90,10 @@ Mobina Kashaniyan and Ali Jannesari
 - [arXiv Abstract](https://arxiv.org/abs/2608.03961)
 - [PDF](https://arxiv.org/pdf/2608.03961)
 - [DOI](https://doi.org/10.48550/arXiv.2608.03961)
+
+
+## LLM Test-Time Scaling and Test-Time Compute
+
+## Adaptive Sampling for Inference-Time Compute
+
+## Interpretable Test-Time Reasoning with a Fuzzy Controller
