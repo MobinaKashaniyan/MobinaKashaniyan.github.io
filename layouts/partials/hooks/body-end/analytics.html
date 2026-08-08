@@ -13,8 +13,14 @@ window.goatcounter = {
 <script>
 document.addEventListener("DOMContentLoaded", async function () {
   const path = window.location.pathname || "/";
-  const base =
-    "https://mobinakashaniyan.goatcounter.com/counter/" + path + ".json";
+
+  const totalUrl =
+    "https://mobinakashaniyan.goatcounter.com/counter/" +
+    path +
+    ".json";
+
+  const monthUrl =
+    totalUrl + "?start=month";
 
   async function getViews(url) {
     try {
@@ -28,8 +34,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
   }
 
-  const total = await getViews(base);
-  const month = await getViews(base + "?start=month");
+  const total = await getViews(totalUrl);
+  const month = await getViews(monthUrl);
 
   const totalEl = document.getElementById("gc-total-views");
   const monthEl = document.getElementById("gc-month-views");
