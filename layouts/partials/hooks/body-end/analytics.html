@@ -1,7 +1,7 @@
 <script>
 window.goatcounter = {
-  path: function() {
-    return location.pathname;
+  path: function () {
+    return window.location.pathname || "/";
   }
 };
 </script>
@@ -14,19 +14,18 @@ window.goatcounter = {
 
 <script>
 document.addEventListener("DOMContentLoaded", async function () {
-  const code = "mobinakashaniyan";
-  const path = encodeURIComponent(window.location.pathname);
+  const path = encodeURIComponent(window.location.pathname || "/");
   const base =
-    `https://${code}.goatcounter.com/counter/${path}.json`;
+    "https://mobinakashaniyan.goatcounter.com/counter/" + path + ".json";
 
   async function getViews(url) {
     try {
       const response = await fetch(url);
-      if (!response.ok) return "0";
+      if (!response.ok) return "—";
       const data = await response.json();
       return data.count || "0";
-    } catch {
-      return "0";
+    } catch (e) {
+      return "—";
     }
   }
 
