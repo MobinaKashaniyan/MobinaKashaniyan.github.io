@@ -3,3 +3,33 @@
   async
   src="//gc.zgo.at/count.js">
 </script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", async function () {
+  const code = "mobinakashaniyan";
+  const path = encodeURIComponent(window.location.pathname);
+  const base =
+    `https://${code}.goatcounter.com/counter/${path}.json`;
+
+  async function getViews(url) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) return "0";
+      const data = await response.json();
+      return data.count || "0";
+    } catch {
+      return "0";
+    }
+  }
+
+  const total = await getViews(base);
+  const month = await getViews(base + "?start=month");
+
+  const totalEl = document.getElementById("gc-total-views");
+  const monthEl = document.getElementById("gc-month-views");
+
+  if (totalEl) totalEl.textContent = total;
+  if (monthEl) monthEl.textContent = month;
+});
+</script>
