@@ -23,13 +23,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const monthEl = document.getElementById("gc-month-views");
   if (!totalEl && !monthEl) return;
 
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
   function counterPath() {
     if (window.goatcounter && typeof window.goatcounter.get_data === "function") {
       const data = window.goatcounter.get_data();
       if (data && data.p) return data.p;
     }
 
-    if (typeof window.goatcounter.path === "function") {
+    if (window.goatcounter && typeof window.goatcounter.path === "function") {
       return window.goatcounter.path();
     }
 
@@ -38,17 +42,34 @@ document.addEventListener("DOMContentLoaded", function () {
     return path;
   }
 
-  async function getViews(url) {
+  function parseCount(value) {
+    if (value == null) return null;
+    const digits = String(value).replace(/[^\d]/g, "");
+    if (!digits) return null;
+    return parseInt(digits, 10);
+  }
+
+  async function fetchCount(url) {
     try {
       const response = await fetch(url);
-      if (response.status === 404) return "0";
-      if (!response.ok) return "—";
-
-      const data = await response.json();
-      return data.count || "0";
+      // GoatCounter returns JSON even on 404 for unknown paths.
+      const data = await response.json().catch(() => null);
+      if (!data) return null;
+      return parseCount(data.count);
     } catch {
-      return "—";
+      return null;
     }
+  }
+
+  function render(total, month) {
+    // GoatCounter's public counter can 404/cache 0 for brand-new paths for up
+    // to ~4 hours, even after the dashboard already shows the visit. Since this
+    // pageview was just sent, show at least 1.
+    const shownTotal = total == null || total < 1 ? 1 : total;
+    const shownMonth = month == null || month < 1 ? 1 : month;
+
+    if (totalEl) totalEl.textContent = String(shownTotal);
+    if (monthEl) monthEl.textContent = String(shownMonth);
   }
 
   async function updateViews() {
@@ -57,20 +78,28 @@ document.addEventListener("DOMContentLoaded", function () {
       "https://mobinakashaniyan.goatcounter.com/counter/" + path + ".json";
     const monthUrl = totalUrl + "?start=month";
 
-    const [total, month] = await Promise.all([
-      getViews(totalUrl),
-      getViews(monthUrl)
-    ]);
+    // Avoid requesting the counter immediately after the first-ever hit for a
+    // path: a 404 there gets cached by GoatCounter for up to four hours.
+    await sleep(4000);
 
-    if (totalEl) totalEl.textContent = total;
-    if (monthEl) monthEl.textContent = month;
+    let total = await fetchCount(totalUrl);
+    let month = await fetchCount(monthUrl);
+    render(total, month);
+
+    // Retry later in case the path was still being created on first request.
+    if (total == null || total < 1) {
+      await sleep(15000);
+      total = await fetchCount(totalUrl);
+      month = await fetchCount(monthUrl);
+      render(total, month);
+    }
   }
 
-  // Wait briefly so count.js can finish loading and register this visit.
   const started = Date.now();
   const waitForGoatCounter = setInterval(function () {
-    const ready = window.goatcounter && typeof window.goatcounter.get_data === "function";
-    const timedOut = Date.now() - started > 3000;
+    const ready =
+      window.goatcounter && typeof window.goatcounter.get_data === "function";
+    const timedOut = Date.now() - started > 5000;
     if (!ready && !timedOut) return;
 
     clearInterval(waitForGoatCounter);
