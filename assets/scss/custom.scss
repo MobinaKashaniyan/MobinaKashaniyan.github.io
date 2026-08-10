@@ -820,6 +820,12 @@ html { scroll-behavior: smooth; }
   opacity: 0.65;
 }
 
+.article-views-footer {
+  margin: 1.5rem 0 0.75rem;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
 @media (max-width: 991px) {
   .mk-about-text {
     padding-left: 0;

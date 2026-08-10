@@ -38,18 +38,28 @@
 </footer>
 
 
-<script
-  data-goatcounter="https://mobinakashaniyan.goatcounter.com/count"
-  data-goatcounter-settings='{"no_onload":true,"no_events":true}'
-  async
-  src="https://gc.zgo.at/count.js">
-</script>
-
+{{/* Homepage section tabs only. Real pageviews are handled in body-end/analytics.html. */}}
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+  const path = window.location.pathname || "/";
+  const isHome =
+    path === "/" ||
+    path === "/index.html" ||
+    path.endsWith("/index.html");
+
+  if (!isHome) return;
+
   const homeLink = document.querySelector(
-    'nav a[href="/index.html"], nav a[href$="/index.html"]'
+    'nav a[href="/index.html"], nav a[href$="/index.html"], nav a[href="/"]'
   );
+
+  // Wowchemy renders section links as /#research, not #research.
+  const sectionLinks = Array.from(
+    document.querySelectorAll('nav a[href*="#"]')
+  ).filter(link => {
+    const id = (link.hash || "").substring(1);
+    return id && id !== "top";
+  });
 
   const tabs = [
     {
@@ -57,17 +67,17 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Home",
       link: homeLink
     },
-    ...Array.from(document.querySelectorAll('nav a[href^="#"]')).map(link => ({
+    ...sectionLinks.map(link => ({
       id: link.hash.substring(1),
-      title: link.textContent.trim(),
+      title: link.textContent.trim().replace(/\s*\(\d+\)\s*$/, ""),
       link: link
     }))
   ].filter(tab => tab.id && tab.link);
 
-  // Count each tab once per page visit.
   const countedTabs = new Set();
 
   function trackTab(tab) {
+    if (!window.goatcounter || !window.goatcounter.count) return;
     if (countedTabs.has(tab.id)) return;
 
     countedTabs.add(tab.id);
@@ -80,9 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function displayCount(tab) {
-    const path = encodeURIComponent(`/tab/${tab.id}`);
+    const encoded = encodeURIComponent(`/tab/${tab.id}`);
     const url =
-      `https://mobinakashaniyan.goatcounter.com/counter/${path}.json`;
+      `https://mobinakashaniyan.goatcounter.com/counter/${encoded}.json`;
 
     fetch(url)
       .then(response => {
@@ -91,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .then(data => {
         if (!data) return;
+        if (tab.link.querySelector(".tab-visit-count")) return;
 
         const counter = document.createElement("span");
         counter.className = "tab-visit-count";
@@ -121,6 +132,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
     });
+
+    // Count the section if the page was opened with a hash already set.
+    if (window.location.hash) {
+      const active = tabs.find(
+        tab => tab.id === window.location.hash.substring(1)
+      );
+      if (active) trackTab(active);
+    }
   }, 100);
 });
 </script>

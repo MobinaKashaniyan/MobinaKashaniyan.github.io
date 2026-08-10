@@ -1,30 +1,47 @@
+{{/* Single GoatCounter integration: auto-count real page paths + article view UI. */}}
 <script>
 window.goatcounter = {
-  path: location.pathname || "/"
+  // Normalize so /index.html and trailing slashes match GoatCounter's stored paths.
+  path: function () {
+    let path = window.location.pathname || "/";
+    if (path === "/index.html" || path.endsWith("/index.html")) return "/";
+    if (path.length > 1) path = path.replace(/\/+$/, "");
+    return path;
+  }
 };
 </script>
-
 <script
   data-goatcounter="https://mobinakashaniyan.goatcounter.com/count"
+  data-goatcounter-settings='{"no_events":true}'
   async
   src="https://gc.zgo.at/count.js">
 </script>
 
 <script>
-document.addEventListener("DOMContentLoaded", async function () {
-  const path = window.location.pathname || "/";
+document.addEventListener("DOMContentLoaded", function () {
+  const totalEl = document.getElementById("gc-total-views");
+  const monthEl = document.getElementById("gc-month-views");
+  if (!totalEl && !monthEl) return;
 
-  const totalUrl =
-    "https://mobinakashaniyan.goatcounter.com/counter/" +
-    path +
-    ".json";
+  function counterPath() {
+    if (window.goatcounter && typeof window.goatcounter.get_data === "function") {
+      const data = window.goatcounter.get_data();
+      if (data && data.p) return data.p;
+    }
 
-  const monthUrl =
-    totalUrl + "?start=month";
+    if (typeof window.goatcounter.path === "function") {
+      return window.goatcounter.path();
+    }
+
+    let path = window.location.pathname || "/";
+    if (path.length > 1) path = path.replace(/\/+$/, "");
+    return path;
+  }
 
   async function getViews(url) {
     try {
       const response = await fetch(url);
+      if (response.status === 404) return "0";
       if (!response.ok) return "—";
 
       const data = await response.json();
@@ -34,13 +51,30 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
   }
 
-  const total = await getViews(totalUrl);
-  const month = await getViews(monthUrl);
+  async function updateViews() {
+    const path = encodeURIComponent(counterPath());
+    const totalUrl =
+      "https://mobinakashaniyan.goatcounter.com/counter/" + path + ".json";
+    const monthUrl = totalUrl + "?start=month";
 
-  const totalEl = document.getElementById("gc-total-views");
-  const monthEl = document.getElementById("gc-month-views");
+    const [total, month] = await Promise.all([
+      getViews(totalUrl),
+      getViews(monthUrl)
+    ]);
 
-  if (totalEl) totalEl.textContent = total;
-  if (monthEl) monthEl.textContent = month;
+    if (totalEl) totalEl.textContent = total;
+    if (monthEl) monthEl.textContent = month;
+  }
+
+  // Wait briefly so count.js can finish loading and register this visit.
+  const started = Date.now();
+  const waitForGoatCounter = setInterval(function () {
+    const ready = window.goatcounter && typeof window.goatcounter.get_data === "function";
+    const timedOut = Date.now() - started > 3000;
+    if (!ready && !timedOut) return;
+
+    clearInterval(waitForGoatCounter);
+    updateViews();
+  }, 100);
 });
 </script>
