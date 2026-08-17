@@ -1,56 +1,153 @@
 ---
-title: "How LLM-Driven AutoML Can Improve Cross-Lingual Handwritten OCR"
+title: "LLM-Driven AutoML and AI Agents for Multilingual Handwritten OCR"
 date: 2026-07-02
 draft: false
-summary: "A research summary of my ICCKE 2025 paper on LLM-driven AutoML, cross-lingual handwritten OCR, and closed-loop neural architecture search using GPT-5, GPT-4o, and Claude Sonnet 4."
+
+summary: "LLM-driven AutoML and AI agents for multilingual handwritten text recognition, cross-lingual OCR, and closed-loop neural architecture search across Arabic, Persian, and English handwriting."
+
 authors:
   - admin
+
 tags:
-  - LLM-Driven AutoML
+  - Optical Character Recognition
+  - OCR
+  - Handwritten Text Recognition
+  - HTR
+  - Handwriting Recognition
   - Handwritten OCR
-  - Cross-Lingual OCR
   - Multilingual OCR
-  - Neural Architecture Search
+  - Cross-Lingual OCR
+  - Arabic OCR
+  - Persian OCR
+  - English Handwriting Recognition
+  - Document AI
+  - Document Intelligence
+  - Computer Vision
+  - Artificial Intelligence
+  - Machine Learning
+  - Deep Learning
+  - AutoML
+  - Automated Machine Learning
+  - LLM-Driven AutoML
+  - AI Agents
+  - LLM Agents
+  - Agentic AI
+  - Autonomous AI Agents
+  - Multi-Agent AI
+  - Intelligent Agents
+  - Agent-Based AI
   - Large Language Models
+  - Neural Architecture Search
+  - NAS
+  - Automated Neural Architecture Design
+  - Automated Model Design
+  - Model Optimization
+  - Multilingual AI
+  - Cross-Lingual Learning
+  - Low-Resource Languages
+  - Low-Resource NLP
   - GPT-5
   - GPT-4o
   - Claude Sonnet 4
-  - Persian OCR
-  - Arabic OCR
-  - Document Intelligence
+
 categories:
-  - Research Summary
   - Artificial Intelligence
+  - AI Agents
   - Computer Vision
+  - Machine Learning
+  - Document AI
+  - Automated Machine Learning
+  - Research Summary
+
 image:
   caption: ""
   focal_point: "Center"
 ---
 
-Handwritten text recognition remains a challenging problem in machine learning, especially when models must work across multiple languages and writing systems. Arabic, English, and Persian scripts each introduce different visual structures, character shapes, stroke patterns, and recognition challenges. These differences make cross-lingual handwritten OCR difficult to scale using traditional manually designed models.
+## LLM-Driven AutoML for Handwritten Text Recognition
 
-In our paper, **“LLM-Driven AutoML for Cross-Lingual Handwritten OCR: Closed-Loop Neural Architecture Search with GPT-5, GPT-4o, and Claude Sonnet 4,”** we study how large language models can support fully automated model design for handwritten optical character recognition.
+Handwritten text recognition (HTR), also known as handwritten OCR, remains a challenging problem in computer vision and document AI, particularly across different languages and writing systems.
 
-The main idea is to use LLMs as AutoML agents. Instead of relying on manual neural architecture design, domain-specific preprocessing, or human model selection, the proposed pipeline allows large language models to generate, evaluate, and refine OCR architectures in a closed-loop neural architecture search process.
+Arabic, Persian, and English handwriting differ substantially in character structure, stroke patterns, connectivity, and visual appearance. These differences make multilingual and cross-lingual OCR difficult to address with manually designed neural network architectures.
 
-The framework uses **GPT-5, GPT-4o, and Claude Sonnet 4** to independently propose and improve neural network architectures for handwritten OCR. The approach is evaluated on **Arabic, English, and Persian handwritten text recognition**, making it relevant to multilingual OCR, low-resource language processing, document intelligence, and automated machine learning.
+In our paper, **“LLM-Driven AutoML for Cross-Lingual Handwritten OCR: Closed-Loop Neural Architecture Search with GPT-5, GPT-4o, and Claude Sonnet 4,”** we investigate whether large language models can act as autonomous AutoML agents for designing handwritten text recognition systems.
 
-This work contributes to research on **LLM-driven AutoML, cross-lingual OCR, handwritten text recognition, neural architecture search, multilingual AI, and automated model design**.
+## Large Language Models as AutoML Agents
 
-Researchers working on OCR, AutoML, LLM agents, computer vision, Persian handwriting recognition, Arabic handwriting recognition, or low-resource language technologies may find this work useful.
+Instead of manually selecting neural network architectures, preprocessing strategies, and model configurations, our framework uses large language models to propose, evaluate, and iteratively refine OCR architectures.
+
+GPT-5, GPT-4o, and Claude Sonnet 4 independently participate in a closed-loop neural architecture search process, allowing the system to explore and improve candidate architectures with limited human intervention.
+
+This connects several active research areas:
+
+- large language model agents
+- automated machine learning
+- neural architecture search
+- computer vision
+- document intelligence
+- handwritten text recognition
+- multilingual AI
+
+## Multilingual and Cross-Lingual OCR
+
+The framework is evaluated on **Arabic, Persian, and English handwritten text recognition**, making the work relevant to multilingual OCR and low-resource language technologies.
+
+Arabic and Persian handwriting recognition are particularly important because many OCR systems and datasets remain concentrated on English and other high-resource languages.
+
+The proposed approach therefore explores whether LLM-driven automated model design can generalize across substantially different writing systems.
+
+## Closed-Loop Neural Architecture Search
+
+Traditional neural architecture search can require substantial manual engineering or large computational search spaces.
+
+Our approach investigates an alternative in which LLM agents reason about experimental results and iteratively propose new neural architectures.
+
+This creates a closed-loop process:
+
+**architecture generation → model training → evaluation → performance feedback → architecture refinement**
+
+The goal is to automate more of the model-development process while maintaining interpretable experimental iterations.
+
+## Applications in Document AI
+
+The work is relevant beyond handwritten OCR. Similar LLM-driven AutoML approaches could potentially support:
+
+- document understanding
+- historical document recognition
+- multilingual document processing
+- digitization of handwritten archives
+- low-resource language technologies
+- automated computer vision model design
+- intelligent document processing
+
+This research contributes to **LLM-driven AutoML, handwritten text recognition, multilingual OCR, neural architecture search, document AI, LLM agents, low-resource language processing, and automated neural network design**.
+
+## AI Agents for Automated Machine Learning
+
+A central idea of this work is to use large language models as **AI agents for AutoML**. Rather than treating an LLM only as a text generator, the framework gives the model an iterative role in neural architecture design.
+
+Each LLM agent can propose an OCR architecture, observe training and evaluation results, reason about model performance, and generate a refined architecture for the next iteration.
+
+This creates an agentic AI workflow:
+
+**AI agent → architecture proposal → training → evaluation → feedback → architecture refinement**
+
+The framework therefore connects **AI agents, LLM agents, agentic AI, AutoML, neural architecture search, and multilingual handwritten OCR** in a closed-loop model-design process.
 
 ## Paper
 
-**LLM-Driven AutoML for Cross-Lingual Handwritten OCR: Closed-Loop Neural Architecture Search with GPT-5, GPT-4o, and Claude Sonnet 4**  
-Mobina Kashaniyan, Amirhossein Ghassemi, Nasser Mozayani  
+**LLM-Driven AutoML for Cross-Lingual Handwritten OCR: Closed-Loop Neural Architecture Search with GPT-5, GPT-4o, and Claude Sonnet 4**
+
+Mobina Kashaniyan, Amirhossein Ghassemi, Nasser Mozayani
+
 Published in **2025 15th International Conference on Computer and Knowledge Engineering (ICCKE)**, IEEE.
 
-DOI: https://doi.org/10.1109/ICCKE68588.2025.11273810
+**DOI:** https://doi.org/10.1109/ICCKE68588.2025.11273810
 
-PDF : https://mobinakashaniyan.github.io/papers/llm-driven-automl-cross-lingual-handwritten-ocr.pdf
+**PDF:** https://mobinakashaniyan.github.io/papers/llm-driven-automl-cross-lingual-handwritten-ocr.pdf
 
-IEEE Xplore: https://ieeexplore.ieee.org/abstract/document/11273810
+**IEEE Xplore:** https://ieeexplore.ieee.org/abstract/document/11273810
+
 
 ## Keywords
-
-LLM-driven AutoML, handwritten OCR, cross-lingual OCR, multilingual OCR, optical character recognition, neural architecture search, GPT-5, GPT-4o, Claude Sonnet 4, LLM agents, Persian OCR, Arabic OCR, English handwriting recognition, document intelligence, low-resource language processing, automated model design, computer vision.
+handwritten text recognition, HTR, handwritten OCR, optical character recognition, multilingual OCR, Persian OCR, Arabic OCR, Arabic handwriting recognition, Persian handwriting recognition, LLM-driven AutoML, neural architecture search, AutoML, document AI, document intelligence, LLM agents, multilingual AI, low-resource languages.
