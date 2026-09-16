@@ -98,6 +98,12 @@
         <i class="fa-li fas fa-map-marker fa-2x" aria-hidden="true"></i>
         <span id="person-address">{{$addr_formatted}}</span>
       </li>
+      <li>
+        <i class="fa-li fas fa-eye fa-2x" aria-hidden="true"></i>
+        <span class="home-visit-count">
+          <span id="gc-home-views">—</span> homepage visits
+        </span>
+      </li>
     {{ end }}
 
     {{ with $data.directions }}

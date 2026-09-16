@@ -38,7 +38,7 @@
 </footer>
 
 
-{{/* Homepage section tabs only. Real pageviews are handled in body-end/analytics.html. */}}
+{{/* Homepage section tracking only — counts are shown in Contact, not in the nav. */}}
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const path = window.location.pathname || "/";
@@ -53,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
     'nav a[href="/index.html"], nav a[href$="/index.html"], nav a[href="/"]'
   );
 
-  // Wowchemy renders section links as /#research, not #research.
   const sectionLinks = Array.from(
     document.querySelectorAll('nav a[href*="#"]')
   ).filter(link => {
@@ -89,30 +88,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function displayCount(tab) {
-    const encoded = encodeURIComponent(`/tab/${tab.id}`);
-    const url =
-      `https://mobinakashaniyan.goatcounter.com/counter/${encoded}.json`;
+  function parseCount(value) {
+    if (value == null) return 0;
+    const digits = String(value).replace(/[^\d]/g, "");
+    return digits ? parseInt(digits, 10) : 0;
+  }
 
-    fetch(url)
-      .then(response => {
-        if (!response.ok) return null;
-        return response.json();
-      })
-      .then(data => {
-        if (!data) return;
-        if (tab.link.querySelector(".tab-visit-count")) return;
+  async function fetchPathCount(path) {
+    try {
+      const url =
+        "https://mobinakashaniyan.goatcounter.com/counter/" +
+        encodeURIComponent(path) +
+        ".json";
+      const response = await fetch(url);
+      const data = await response.json().catch(() => null);
+      return data ? parseCount(data.count) : 0;
+    } catch {
+      return 0;
+    }
+  }
 
-        const counter = document.createElement("span");
-        counter.className = "tab-visit-count";
-        counter.textContent = ` (${data.count})`;
-        counter.title = "Number of visits";
+  async function displayHomeVisits() {
+    const el = document.getElementById("gc-home-views");
+    if (!el) return;
 
-        tab.link.appendChild(counter);
-      })
-      .catch(() => {
-        // Keep the navigation working if the counter is unavailable.
-      });
+    // Prefer the real homepage path; fall back to legacy /tab/home counts.
+    const [homeCount, tabHomeCount] = await Promise.all([
+      fetchPathCount("/"),
+      fetchPathCount("/tab/home")
+    ]);
+
+    const total = Math.max(homeCount, tabHomeCount, 1);
+    el.textContent = String(total);
   }
 
   const waitForGoatCounter = setInterval(function () {
@@ -124,8 +131,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (homeTab) trackTab(homeTab);
 
     tabs.forEach(tab => {
-      displayCount(tab);
-
       if (tab.id !== "home") {
         tab.link.addEventListener("click", function () {
           trackTab(tab);
@@ -133,13 +138,14 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Count the section if the page was opened with a hash already set.
     if (window.location.hash) {
       const active = tabs.find(
         tab => tab.id === window.location.hash.substring(1)
       );
       if (active) trackTab(active);
     }
+
+    displayHomeVisits();
   }, 100);
 });
 </script>

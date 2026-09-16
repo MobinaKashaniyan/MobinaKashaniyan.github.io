@@ -814,10 +814,11 @@ html { scroll-behavior: smooth; }
 }
 
 .tab-visit-count {
-  margin-left: 0.15rem;
-  font-size: 0.72em;
-  font-weight: 400;
-  opacity: 0.65;
+  display: none;
+}
+
+.home-visit-count {
+  opacity: 0.85;
 }
 
 .article-views-footer {
