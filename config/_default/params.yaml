@@ -7,7 +7,7 @@ marketing:
   seo:
     site_type: Person
     org_name: 'Iowa State University'
-    description: 'Mobina Kashaniyan — Ph.D. student in Computer Science at Iowa State University. Research in high-performance computing, applied AI, large language models, optimization, and efficient AI systems. Publications include PerfMamba, LLM-Driven AutoML for OCR, and consensus-based serverless auto-scaling.'
+    description: 'Mobina Kashaniyan — Ph.D. student in Computer Science at Iowa State University. Research in high-performance computing, applied AI, large language models, test-time scaling, energy-efficient AI, and optimization. Publications include Sample Count Is Not Enough (EESP@SC26), PerfMamba, LLM-Driven AutoML for OCR, and consensus-based serverless auto-scaling.'
     twitter: ''
   analytics:
     google_analytics: ''

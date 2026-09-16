@@ -31,6 +31,18 @@ This website serves as her central academic portfolio for publications, research
 
 ## Publications
 
+### Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling
+
+**Authors:** Mobina Kashaniyan, Ali Jannesari  
+**Venue:** 3rd IEEE/ACM SC26 Workshop on Energy Efficiency with Sustainable Performance (EESP), co-located with SC26, Chicago, USA  
+**Year:** 2026  
+**Pages:** 1–8  
+**PDF:** https://mobinakashaniyan.github.io/papers/sample-count-is-not-enough-candidate-generation-llm-test-time-scaling.pdf  
+**Publication page:** https://mobinakashaniyan.github.io/publication/sample-count-candidate-generation/  
+**Research summary:** https://mobinakashaniyan.github.io/post/sample-count-is-not-enough-candidate-generation-llm-test-time-scaling/
+
+This paper shows that candidate count alone is not enough to describe the systems cost of multi-candidate LLM test-time scaling. At fixed N=8, generation schedules such as 1×8 versus 8×1 can change A100 GPU energy by about 4.6–4.9× and P95 latency by about 5.8–6.1×. It contributes to research on test-time scaling, candidate-generation strategy, batched inference, GPU energy measurement, sustainable AI, green AI, and high-performance computing.
+
 ### An Auto-Scaling Approach for Serverless Environments Based on a Multi-Expert Consensus Mechanism
 
 **Authors:** Mobina Kashaniyan, Mehrdad Ashtiani, Amirhossein Ghassemi
@@ -66,7 +78,7 @@ This website is designed to provide a searchable and organized academic profile 
 
 ## SEO Keywords
 
-Mobina Kashaniyan, Mobina Kashaniyan academic website, Mobina Kashaniyan publications, Mobina Kashaniyan Google Scholar, Mobina Kashaniyan PhD student, Computer Science researcher, High-Performance Computing, Large Language Models, Applied Artificial Intelligence, Optimization, Machine Learning, AutoML, Serverless Computing, Cloud Computing, Function-as-a-Service, Serverless Auto-Scaling, Cloud Resource Management, Workload Forecasting, Dependency-Aware Scaling, Multi-Expert Consensus, Handwritten OCR, Cross-Lingual OCR, Multilingual OCR, Neural Architecture Search, LLM-Driven AutoML, GPT-5, GPT-4o, Claude Sonnet 4, Persian OCR, Arabic OCR, Document Intelligence.
+Mobina Kashaniyan, Mobina Kashaniyan academic website, Mobina Kashaniyan publications, Mobina Kashaniyan Google Scholar, Mobina Kashaniyan PhD student, Computer Science researcher, High-Performance Computing, Large Language Models, LLM Test-Time Scaling, Test-Time Compute, Candidate-Generation Strategy, Sample Count Is Not Enough, Batched Inference, GPU Energy Measurement, Energy-Efficient AI, Sustainable AI, Green AI, EESP, SC26, Applied Artificial Intelligence, Optimization, Machine Learning, AutoML, Serverless Computing, Cloud Computing, Function-as-a-Service, Serverless Auto-Scaling, Cloud Resource Management, Workload Forecasting, Dependency-Aware Scaling, Multi-Expert Consensus, Handwritten OCR, Cross-Lingual OCR, Multilingual OCR, Neural Architecture Search, LLM-Driven AutoML, GPT-5, GPT-4o, Claude Sonnet 4, Persian OCR, Arabic OCR, Document Intelligence.
 
 ## Built With
 

@@ -44,6 +44,8 @@
       "High-Performance Computing",
       "Applied Artificial Intelligence",
       "Large Language Models",
+      "LLM Test-Time Scaling",
+      "Energy-Efficient AI",
       "Optimization",
       "Efficient AI Systems",
       "Scalable Machine Learning",
@@ -79,8 +81,16 @@
 <meta name="citation_journal_title" content="{{ . }}">
 {{ end }}
 
+{{ with .Params.conference }}
+<meta name="citation_conference_title" content="{{ . }}">
+{{ end }}
+
 {{ with .Params.publisher }}
 <meta name="citation_publisher" content="{{ . }}">
+{{ end }}
+
+{{ with .Params.pages }}
+<meta name="citation_firstpage" content="{{ index (split . "–") 0 }}">
 {{ end }}
 
 {{ with .Params.doi }}
@@ -121,10 +131,15 @@
   {{ with .Params.doi }},
   "identifier": "https://doi.org/{{ . }}"
   {{ end }}
-  {{ with .Params.journal }},
-  "isPartOf": {
+  {{ if .Params.journal }}
+  ,"isPartOf": {
     "@type": "Periodical",
-    "name": {{ . | jsonify }}
+    "name": {{ .Params.journal | jsonify }}
+  }
+  {{ else if .Params.conference }}
+  ,"isPartOf": {
+    "@type": "CreativeWork",
+    "name": {{ .Params.conference | jsonify }}
   }
   {{ end }}
   {{ with .Params.publisher }},
@@ -132,6 +147,9 @@
     "@type": "Organization",
     "name": {{ . | jsonify }}
   }
+  {{ end }}
+  {{ with .Params.tags }},
+  "keywords": {{ delimit . ", " | jsonify }}
   {{ end }}
   {{ with .Params.url_pdf }},
   "encoding": {
