@@ -1,14 +1,16 @@
 ---
-title: "Sample Count Is Not Enough: Why Candidate-Generation Strategy Matters for LLM Test-Time Scaling Energy and Performance"
+title: "Sample Count Is Not Enough (arXiv:2609.19499): Why Candidate-Generation Strategy Matters for LLM Test-Time Scaling Energy and Performance"
 date: 2026-09-16
+lastmod: 2026-09-17
 draft: false
 
-summary: "Candidate count N alone does not define the systems cost of LLM test-time scaling. At fixed N=8, generation schedules like 1×8 vs 8×1 can change A100 energy by about 4.6–4.9× and P95 latency by about 5.8–6.1×."
+summary: "arXiv:2609.19499 — Candidate count N alone does not define the systems cost of LLM test-time scaling. At fixed N=8, generation schedules like 1×8 vs 8×1 can change A100 energy by about 4.6–4.9× and P95 latency by about 5.8–6.1×."
 
 authors:
   - admin
 
 tags:
+  - arXiv:2609.19499
   - Sample Count Is Not Enough
   - LLM Test-Time Scaling
   - Test-Time Scaling
@@ -34,11 +36,16 @@ tags:
   - SC26
   - EESP Workshop
   - A100 GPU
+  - V100 GPU
   - GSM8K
+  - SciQ
   - Phi-3-mini
   - Qwen2.5
   - LLM Latency
   - LLM Throughput
+  - cs.LG
+  - cs.DC
+  - cs.PF
 
 categories:
   - Large Language Models
@@ -47,6 +54,18 @@ categories:
   - Test-Time Scaling
   - Research Summary
 ---
+
+## New Paper on arXiv: 2609.19499
+
+Our paper is now live on arXiv:
+
+**[Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling](https://arxiv.org/abs/2609.19499)**
+
+- Authors: **Mobina Kashaniyan**, **Ali Jannesari**
+- arXiv: [2609.19499](https://arxiv.org/abs/2609.19499)
+- DOI: [10.48550/arXiv.2609.19499](https://doi.org/10.48550/arXiv.2609.19499)
+- PDF: [arxiv.org/pdf/2609.19499](https://arxiv.org/pdf/2609.19499)
+- Venue: 3rd IEEE/ACM SC26 Workshop on Energy Efficiency with Sustainable Performance (**EESP**), co-located with **SC26**, Chicago, USA, November 2026
 
 ## What Is LLM Test-Time Scaling?
 
@@ -65,7 +84,7 @@ Those schedules have the same candidate count, but they can have very different 
 
 ## Candidate-Generation Strategy and Generation Schedules
 
-In our paper, we formalize the **candidate-generation schedule** and compare four fixed-budget schedules at **N=8**:
+In [arXiv:2609.19499](https://arxiv.org/abs/2609.19499), we formalize the **candidate-generation schedule** and compare four fixed-budget schedules at **N=8**:
 
 - **1×8**: one call with eight candidates
 - **2×4**: two calls with four candidates each
@@ -89,7 +108,7 @@ When candidates are independent and memory allows it, **fewer generation calls w
 
 # Our Paper
 
-In our paper, **“Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling,”** we show that the systems cost of multi-candidate LLM inference depends on how candidates are grouped into generation calls, not only on how many candidates are generated.
+In our paper, **“Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling” ([arXiv:2609.19499](https://arxiv.org/abs/2609.19499))**, we show that the systems cost of multi-candidate LLM inference depends on how candidates are grouped into generation calls, not only on how many candidates are generated.
 
 This work was accepted to the **3rd IEEE/ACM SC26 Workshop on Energy Efficiency with Sustainable Performance (EESP)**, co-located with **SC26** in Chicago, USA (pages 1–8, November 2026).
 
@@ -105,19 +124,35 @@ We therefore fix N=8 and compare four generation schedules: 1×8, 2×4, 4×2, an
 
 The same pattern appears across three independently scheduled A100 nodes per model and in short-output SciQ/V100 experiments. These results show that candidate count alone is not enough to describe the systems cost of multi-candidate test-time scaling. When candidates are independent and memory allows it, fewer generation calls with larger batch sizes are more efficient. Evaluations should therefore report not only candidate count and accuracy, but also generation schedule and GPU-level systems metrics.
 
-## Paper
+## Paper Links
 
 **Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling**
 
 Mobina Kashaniyan and Ali Jannesari
 
-- [PDF](https://mobinakashaniyan.github.io/papers/sample-count-is-not-enough-candidate-generation-llm-test-time-scaling.pdf)
+- [arXiv Abstract](https://arxiv.org/abs/2609.19499)
+- [arXiv PDF](https://arxiv.org/pdf/2609.19499)
+- [DOI](https://doi.org/10.48550/arXiv.2609.19499)
+- [HTML](https://arxiv.org/html/2609.19499)
 - [Publication Page](https://mobinakashaniyan.github.io/publication/sample-count-candidate-generation/)
 - Venue: 3rd IEEE/ACM SC26 Workshop on Energy Efficiency with Sustainable Performance (EESP), co-located with SC26, Chicago, USA, November 2026
 
-## Citation
+## Cite This Paper
 
-Kashaniyan, M., & Jannesari, A. (2026). Sample count is not enough: Candidate-generation strategy shapes the energy and performance of LLM test-time scaling. In *Proceedings of the 3rd IEEE/ACM SC26 Workshop on Energy Efficiency with Sustainable Performance (EESP)* (pp. 1–8). IEEE/ACM.
+```bibtex
+@inproceedings{kashaniyan2026sample,
+  title     = {Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of {LLM} Test-Time Scaling},
+  author    = {Kashaniyan, Mobina and Jannesari, Ali},
+  booktitle = {Proceedings of the 3rd IEEE/ACM SC26 Workshop on Energy Efficiency with Sustainable Performance (EESP)},
+  pages     = {1--8},
+  year      = {2026},
+  note      = {arXiv:2609.19499},
+  doi       = {10.48550/arXiv.2609.19499},
+  url       = {https://arxiv.org/abs/2609.19499}
+}
+```
+
+Kashaniyan, M., & Jannesari, A. (2026). Sample count is not enough: Candidate-generation strategy shapes the energy and performance of LLM test-time scaling. *arXiv preprint arXiv:2609.19499*. https://doi.org/10.48550/arXiv.2609.19499
 
 ## LLM Test-Time Scaling Energy and Performance
 
@@ -126,3 +161,5 @@ Kashaniyan, M., & Jannesari, A. (2026). Sample count is not enough: Candidate-ge
 ## Batched vs Serial Generation Schedules for Test-Time Compute
 
 ## Sustainable and Energy-Efficient LLM Inference on GPUs
+
+## arXiv 2609.19499 LLM Energy Efficiency SC26 EESP

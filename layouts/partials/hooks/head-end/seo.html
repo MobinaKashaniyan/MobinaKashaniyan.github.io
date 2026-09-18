@@ -97,6 +97,10 @@
 <meta name="citation_doi" content="{{ . }}">
 {{ end }}
 
+{{ with .Params.arxiv }}
+<meta name="citation_arxiv_id" content="{{ . }}">
+{{ end }}
+
 {{ with .Params.url_pdf }}
 <meta name="citation_pdf_url" content="{{ . }}">
 {{ end }}
@@ -129,7 +133,35 @@
   "url": {{ .Permalink | jsonify }},
   "mainEntityOfPage": {{ .Permalink | jsonify }}
   {{ with .Params.doi }},
-  "identifier": "https://doi.org/{{ . }}"
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "DOI",
+      "value": "https://doi.org/{{ . }}"
+    }
+    {{ with $.Params.arxiv }}
+    ,{
+      "@type": "PropertyValue",
+      "propertyID": "arXiv",
+      "value": "arXiv:{{ . }}"
+    }
+    {{ end }}
+  ],
+  "sameAs": [
+    "https://doi.org/{{ . }}"
+    {{ with $.Params.arxiv }}
+    ,"https://arxiv.org/abs/{{ . }}"
+    ,"https://arxiv.org/pdf/{{ . }}"
+    {{ end }}
+  ]
+  {{ else }}
+  {{ with .Params.arxiv }}
+  ,"identifier": "arXiv:{{ . }}",
+  "sameAs": [
+    "https://arxiv.org/abs/{{ . }}",
+    "https://arxiv.org/pdf/{{ . }}"
+  ]
+  {{ end }}
   {{ end }}
   {{ if .Params.journal }}
   ,"isPartOf": {
