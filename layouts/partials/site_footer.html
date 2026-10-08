@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!isHome) return;
 
   const homeLink = document.querySelector(
-    'nav a[href="/index.html"], nav a[href$="/index.html"], nav a[href="/"]'
+    'nav a[href="/"], nav a[href="/index.html"], nav a[href$="/index.html"]'
   );
 
   const sectionLinks = Array.from(

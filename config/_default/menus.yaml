@@ -1,6 +1,6 @@
 main:
   - name: Home
-    url: '/index.html'
+    url: '/'
     weight: 10
   - name: Research
     url: '#research'
