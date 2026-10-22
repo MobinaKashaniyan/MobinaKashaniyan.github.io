@@ -3,7 +3,7 @@ title: "ATEST / RATTS: Adaptive Resource-Aware Test-Time Scaling for LLM Inferen
 date: 2026-10-18
 draft: false
 
-summary: "ATEST (RATTS) is adaptive resource-aware test-time scaling for LLM inference. The same four-sample query can use 4.1× more energy when the GPU is busy. ATEST-Online answers every query within budget. arXiv:2610.25519."
+summary: "ATEST (RATTS) makes self-consistency resource-aware. The same four-sample self-consistency query can use 4.1× more energy when the GPU is busy. ATEST-Online answers every query within budget. arXiv:2610.25519."
 
 authors:
   - admin
@@ -25,6 +25,8 @@ tags:
   - ATEST-Online
   - ATEST-Calibrated
   - Self-Consistency
+  - Self Consistency
+  - Self-Consistency Sampling
   - Best-of-N Sampling
   - LLM Energy Efficiency
   - Sustainable AI
@@ -55,9 +57,9 @@ We also call this idea **RATTS: Resource-Aware Test-Time Scaling for LLM Inferen
 - DOI: [10.48550/arXiv.2610.25519](https://doi.org/10.48550/arXiv.2610.25519)
 - PDF: [arxiv.org/pdf/2610.25519](https://arxiv.org/pdf/2610.25519)
 
-## Why Fixed Test-Time Scaling Wastes Energy
+## Self-Consistency and Why a Fixed Sample Count Wastes Energy
 
-**Test-time scaling** improves LLM answers by generating several samples and voting. Most adaptive methods decide how many samples a question needs from difficulty or answer agreement. They treat the cost of one sample as a fixed number.
+**Self-consistency** improves LLM answers by generating several samples and voting. Most adaptive self-consistency methods decide how many samples a question needs from difficulty or answer agreement. They treat the cost of one sample as a fixed number.
 
 On a shared GPU, that cost is not fixed. In our measurements, the **same four-sample query uses up to 4.1× more energy** when other jobs load the GPU. A GSM8K query can cost **121.7 J** on an idle A100 and **455.6 J** on a busy one.
 

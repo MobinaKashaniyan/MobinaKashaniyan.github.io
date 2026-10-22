@@ -45,7 +45,7 @@ abstract: >-
   42.4% of the queries. Including offline calibration, ATEST-Online uses 42× less
   GPU time and 48× less energy than ATEST-Calibrated.
 
-summary: "ATEST (RATTS) adapts LLM test-time scaling to live GPU load. The same four-sample query can cost 4.1× more energy when the GPU is busy. arXiv:2610.25519."
+summary: "ATEST (RATTS) is resource-aware self-consistency for LLM inference. It adapts how many samples to draw to live GPU load. The same four-sample query can cost 4.1× more energy when the GPU is busy. arXiv:2610.25519."
 
 tags:
   - ATEST
@@ -75,6 +75,8 @@ tags:
   - NVIDIA L40S
   - GSM8K
   - Self-Consistency
+  - Self Consistency
+  - Self-Consistency Sampling
   - Best-of-N
   - cs.LG
   - cs.AI
@@ -122,7 +124,7 @@ links:
 
 **New preprint:** [arXiv:2610.25519](https://arxiv.org/abs/2610.25519) — **ATEST: Adaptive Resource-Aware Test-Time Scaling for LLM Inference** by **Mobina Kashaniyan** and **Ali Jannesari**.
 
-ATEST is a **resource-aware test-time scaling** method, also called **RATTS (Resource-Aware Test-Time Scaling)**. Standard test-time scaling generates a fixed number of samples whether the GPU is idle or busy. ATEST reads the live GPU state and skips extra samples when they are not worth their current energy cost.
+ATEST is a **resource-aware test-time scaling** method, also called **RATTS (Resource-Aware Test-Time Scaling)**. It targets **self-consistency**: the model draws several answers and keeps the plurality vote. Standard self-consistency uses a fixed sample count whether the GPU is idle or busy. ATEST reads the live GPU state and skips extra self-consistency samples when they are not worth their current energy cost.
 
 On an **NVIDIA A100**, the same four-sample query uses up to **4.1× more energy** when other jobs load the GPU. A GSM8K query that costs **121.7 J** on an idle GPU can cost **455.6 J** on a busy one.
 
@@ -132,7 +134,9 @@ On GSM8K at high load, ATEST-Online keeps **60.0% accuracy** and answers every q
 
 This work follows our earlier result that [candidate count alone is not enough](https://arxiv.org/abs/2609.19499) to describe the systems cost of test-time scaling. ATEST asks the next question: what does one more sample cost on the GPU right now?
 
-**Keywords:** ATEST, RATTS, resource-aware test-time scaling, adaptive test-time scaling, LLM inference, GPU load, energy-aware systems, adaptive sampling, A100, L40S, Phi-3-mini, Qwen2.5-3B, GSM8K, arXiv:2610.25519.
+**Keywords:** ATEST, RATTS, self-consistency, self consistency, resource-aware self-consistency, adaptive test-time scaling, LLM inference, GPU load, energy-aware systems, adaptive sampling, A100, L40S, Phi-3-mini, Qwen2.5-3B, GSM8K, arXiv:2610.25519.
+
+## Self-Consistency under GPU Load
 
 ## Links
 

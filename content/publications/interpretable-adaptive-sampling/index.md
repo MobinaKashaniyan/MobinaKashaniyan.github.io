@@ -36,9 +36,9 @@ abstract: >-
   practical direction for more efficient test-time reasoning in large
   language models.
 
-summary: "An interpretable adaptive sampling method that dynamically allocates inference-time compute for efficient LLM test-time scaling."
+summary: "Interpretable adaptive sampling for self-consistency. A fuzzy controller uses prompt complexity and model confidence to choose how many self-consistency samples each prompt receives."
 
-tags: ["LLM Test-Time Scaling", "Adaptive Sampling", "Inference-Time Compute", "Efficient LLM Inference", "Large Language Models", "Test-Time Reasoning", "Interpretable AI", "Fuzzy Logic", "Best-of-N Sampling", "Self-Consistency", "Adaptive Computation"]
+tags: ["LLM Test-Time Scaling", "Adaptive Sampling", "Self-Consistency", "Self Consistency", "Self-Consistency Sampling", "Inference-Time Compute", "Efficient LLM Inference", "Large Language Models", "Test-Time Reasoning", "Interpretable AI", "Fuzzy Logic", "Best-of-N Sampling", "Adaptive Computation"]
 
 categories: ["Preprint", "Artificial Intelligence", "Large Language Models"]
 
@@ -75,7 +75,9 @@ The approach is evaluated against fixed best-of-N sampling, compute-aware scalin
 
 This work is relevant to LLM test-time scaling, adaptive inference, compute-efficient AI, interpretable sampling, self-consistency, and efficient large language model reasoning.
 
-**Keywords:** LLM test-time scaling, adaptive sampling, inference-time compute, efficient LLM inference, interpretable AI, fuzzy control, best-of-N sampling, self-consistency, adaptive computation, mathematical reasoning.
+**Keywords:** self-consistency, self consistency, adaptive self-consistency, LLM test-time scaling, adaptive sampling, inference-time compute, efficient LLM inference, interpretable AI, fuzzy control, best-of-N sampling, adaptive computation, mathematical reasoning.
+
+## Adaptive Self-Consistency
 
 ## Citation
 

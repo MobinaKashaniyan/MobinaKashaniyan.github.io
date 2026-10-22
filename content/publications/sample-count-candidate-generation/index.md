@@ -44,7 +44,7 @@ abstract: >-
   efficient. Evaluations should therefore report not only candidate count and
   accuracy, but also generation schedule and GPU-level systems metrics.
 
-summary: "arXiv:2609.19499 — At fixed candidate count N, how candidates are batched into generation calls can change LLM test-time scaling energy and latency by several times on A100 GPUs."
+summary: "arXiv:2609.19499 — For self-consistency, candidate count N is not enough. At fixed N, how samples are batched can change LLM test-time scaling energy and latency by several times on A100 GPUs."
 
 tags:
   - arXiv:2609.19499
@@ -58,6 +58,8 @@ tags:
   - Batched Inference
   - Multi-Candidate Sampling
   - Self-Consistency
+  - Self Consistency
+  - Self-Consistency Sampling
   - Best-of-N
   - LLM Energy Efficiency
   - GPU Energy Measurement
@@ -132,7 +134,9 @@ This work was accepted to the **3rd IEEE/ACM SC26 Workshop on Energy Efficiency 
 
 It is relevant to researchers working on **test-time scaling, test-time compute, candidate generation, batched LLM inference, GPU energy measurement, sustainable AI, green AI, high-performance computing, distributed/parallel computing, and efficient large language model systems**.
 
-**Keywords:** arXiv:2609.19499, LLM test-time scaling, test-time compute, candidate-generation strategy, generation schedule, batched inference, multi-candidate sampling, self-consistency, best-of-N, GPU energy, energy-efficient AI, sustainable AI, SC26, EESP, high-performance computing, A100, GSM8K, SciQ, cs.LG, cs.DC, cs.PF.
+**Keywords:** arXiv:2609.19499, self-consistency, self consistency, LLM test-time scaling, test-time compute, candidate-generation strategy, generation schedule, batched inference, multi-candidate sampling, best-of-N, GPU energy, energy-efficient AI, sustainable AI, SC26, EESP, high-performance computing, A100, GSM8K, SciQ, cs.LG, cs.DC, cs.PF.
+
+## Self-Consistency and Generation Schedule
 
 ## Links
 

@@ -4,7 +4,7 @@ date: 2026-09-16
 lastmod: 2026-09-17
 draft: false
 
-summary: "arXiv:2609.19499 — Candidate count N alone does not define the systems cost of LLM test-time scaling. At fixed N=8, generation schedules like 1×8 vs 8×1 can change A100 energy by about 4.6–4.9× and P95 latency by about 5.8–6.1×."
+summary: "arXiv:2609.19499 — Self-consistency sample count N is not enough. At fixed N=8, generation schedules like 1×8 vs 8×1 can change A100 energy by about 4.6–4.9× and P95 latency by about 5.8–6.1×."
 
 authors:
   - admin
@@ -25,6 +25,8 @@ tags:
   - Batched Inference
   - Multi-Candidate Sampling
   - Self-Consistency
+  - Self Consistency
+  - Self-Consistency Sampling
   - Best-of-N Sampling
   - LLM Energy Efficiency
   - Energy-Efficient AI

@@ -3,7 +3,7 @@ title: "Interpretable Adaptive Sampling for LLM Test-Time Scaling and Test-Time 
 date: 2026-08-04
 draft: false
 
-summary: "Interpretable adaptive sampling for LLM test-time scaling and test-time compute. A fuzzy controller uses prompt complexity and model confidence to dynamically allocate inference-time compute for efficient LLM reasoning."
+summary: "Interpretable adaptive self-consistency for LLM test-time scaling. A fuzzy controller uses prompt complexity and model confidence to choose how many self-consistency samples each prompt receives."
 
 authors:
   - admin
@@ -22,6 +22,9 @@ tags:
   - Efficient LLM Reasoning
   - Best-of-N Sampling
   - Self-Consistency
+  - Self Consistency
+  - Self-Consistency Sampling
+  - Adaptive Self-Consistency
   - Inference-Time Sampling
   - Interpretable AI
   - Fuzzy Controller
@@ -36,6 +39,10 @@ categories:
   - Test-Time Scaling
   - Research Summary
 ---
+
+## Adaptive Self-Consistency
+
+Self-consistency draws several answers and keeps the most common one. This paper chooses a different self-consistency sample count for each prompt instead of using one fixed budget.
 
 ## What Is LLM Test-Time Scaling?
 
