@@ -31,6 +31,20 @@ This website serves as her central academic portfolio for publications, research
 
 ## Publications
 
+### ATEST: Adaptive Resource-Aware Test-Time Scaling for LLM Inference
+
+Also called **RATTS** (Resource-Aware Test-Time Scaling for LLM Inference).
+
+**Authors:** Mobina Kashaniyan, Ali Jannesari  
+**Year:** 2026  
+**arXiv:** https://arxiv.org/abs/2610.25519  
+**DOI:** https://doi.org/10.48550/arXiv.2610.25519  
+**PDF:** https://arxiv.org/pdf/2610.25519  
+**Publication page:** https://mobinakashaniyan.github.io/publication/atest/  
+**Research summary:** https://mobinakashaniyan.github.io/post/atest-adaptive-resource-aware-test-time-scaling/
+
+ATEST adapts LLM test-time scaling to live GPU load. The same four-sample query uses up to 4.1× more energy when the GPU is busy. ATEST-Online needs no offline calibration, answers every query within the energy budget, and on GSM8K at high load keeps 60.0% accuracy while a calibrated baseline that defers queries falls to 44.0%. Including profiling, the online mode uses 42× less GPU time and 48× less energy.
+
 ### Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling
 
 **Authors:** Mobina Kashaniyan, Ali Jannesari  
@@ -80,7 +94,7 @@ This website is designed to provide a searchable and organized academic profile 
 
 ## SEO Keywords
 
-Mobina Kashaniyan, Mobina Kashaniyan academic website, Mobina Kashaniyan publications, Mobina Kashaniyan Google Scholar, Mobina Kashaniyan PhD student, Computer Science researcher, High-Performance Computing, Large Language Models, LLM Test-Time Scaling, Test-Time Compute, Candidate-Generation Strategy, Sample Count Is Not Enough, arXiv:2609.19499, Batched Inference, GPU Energy Measurement, Energy-Efficient AI, Sustainable AI, Green AI, EESP, SC26, Applied Artificial Intelligence, Optimization, Machine Learning, AutoML, Serverless Computing, Cloud Computing, Function-as-a-Service, Serverless Auto-Scaling, Cloud Resource Management, Workload Forecasting, Dependency-Aware Scaling, Multi-Expert Consensus, Handwritten OCR, Cross-Lingual OCR, Multilingual OCR, Neural Architecture Search, LLM-Driven AutoML, GPT-5, GPT-4o, Claude Sonnet 4, Persian OCR, Arabic OCR, Document Intelligence.
+Mobina Kashaniyan, Mobina Kashaniyan academic website, Mobina Kashaniyan publications, Mobina Kashaniyan Google Scholar, Mobina Kashaniyan PhD student, Computer Science researcher, High-Performance Computing, Large Language Models, ATEST, RATTS, Adaptive Resource-Aware Test-Time Scaling, Resource-Aware Test-Time Scaling, arXiv:2610.25519, LLM Test-Time Scaling, Test-Time Compute, Candidate-Generation Strategy, Sample Count Is Not Enough, arXiv:2609.19499, Batched Inference, GPU Energy Measurement, Energy-Efficient AI, Sustainable AI, Green AI, EESP, SC26, Applied Artificial Intelligence, Optimization, Machine Learning, AutoML, Serverless Computing, Cloud Computing, Function-as-a-Service, Serverless Auto-Scaling, Cloud Resource Management, Workload Forecasting, Dependency-Aware Scaling, Multi-Expert Consensus, Handwritten OCR, Cross-Lingual OCR, Multilingual OCR, Neural Architecture Search, LLM-Driven AutoML, GPT-5, GPT-4o, Claude Sonnet 4, Persian OCR, Arabic OCR, Document Intelligence.
 
 ## Built With
 

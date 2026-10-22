@@ -120,7 +120,7 @@ links:
     url: "https://mobinakashaniyan.github.io/papers/sample-count-is-not-enough-candidate-generation-llm-test-time-scaling.pdf"
 ---
 
-**New preprint:** [arXiv:2609.19499](https://arxiv.org/abs/2609.19499) — *Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling* by **Mobina Kashaniyan** and **Ali Jannesari**.
+**Preprint:** [arXiv:2609.19499](https://arxiv.org/abs/2609.19499) — *Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling* by **Mobina Kashaniyan** and **Ali Jannesari**. Follow-up: [ATEST / RATTS (arXiv:2610.25519)](https://arxiv.org/abs/2610.25519), adaptive resource-aware test-time scaling that also reacts to live GPU load.
 
 This paper studies **LLM test-time scaling** from a **systems and energy** perspective. It shows that the **candidate count N is not enough** to describe the cost of multi-candidate inference.
 

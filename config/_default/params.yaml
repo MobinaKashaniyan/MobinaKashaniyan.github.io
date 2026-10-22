@@ -7,7 +7,7 @@ marketing:
   seo:
     site_type: Person
     org_name: 'Iowa State University'
-    description: 'Mobina Kashaniyan — Ph.D. student in Computer Science at Iowa State University. Research in HPC, applied AI, LLMs, test-time scaling, and energy-efficient AI. Latest: Sample Count Is Not Enough (arXiv:2609.19499, EESP@SC26). Also PerfMamba, LLM-Driven AutoML for OCR, and serverless auto-scaling.'
+    description: 'Mobina Kashaniyan — Ph.D. student in Computer Science at Iowa State University. Research in HPC, LLMs, test-time scaling, and energy-efficient AI. Latest: ATEST / RATTS, adaptive resource-aware test-time scaling (arXiv:2610.25519). Also Sample Count Is Not Enough (arXiv:2609.19499, EESP@SC26).'
     twitter: ''
   analytics:
     google_analytics: ''

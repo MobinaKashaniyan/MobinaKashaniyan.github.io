@@ -48,6 +48,6 @@ highlight_name: true
 
 I am a Ph.D. student in Computer Science at Iowa State University with research interests in high-performance computing, applied AI, optimization, and large language models. I am interested in building efficient, scalable, and intelligent systems that connect advanced research with real-world applications.
 
-My latest paper, [Sample Count Is Not Enough (arXiv:2609.19499)](https://arxiv.org/abs/2609.19499), studies how candidate-generation strategy shapes the energy and performance of LLM test-time scaling and was accepted to EESP@SC26.
+My latest paper, [ATEST (arXiv:2610.25519)](https://arxiv.org/abs/2610.25519), is adaptive resource-aware test-time scaling for LLM inference: the same sample budget can cost 4.1× more energy when the GPU is busy. Also see [Sample Count Is Not Enough (arXiv:2609.19499)](https://arxiv.org/abs/2609.19499), accepted to EESP@SC26.
 
 Find my publications on [Google Scholar](https://scholar.google.com/citations?user=WcGHM0sAAAAJ&hl=en) or download my [CV](/files/resume/mobina-kashaniyan-cv.pdf).
