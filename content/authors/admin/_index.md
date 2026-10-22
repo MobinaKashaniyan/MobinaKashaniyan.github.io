@@ -22,6 +22,7 @@ education:
     - course: Direct Ph.D. in Computer Science
       institution: Iowa State University
       year: 2024 – Present
+      description: GPA 3.95/4
     - course: B.Sc. in Computer Engineering
       institution: Iran University of Science and Technology
       year: 2017 – 2021

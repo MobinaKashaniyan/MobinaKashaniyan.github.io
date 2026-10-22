@@ -16,6 +16,9 @@ design:
       <span class="mk-badge">2024 – Present</span>
     </div>
     <div class="mk-timeline-org"><a href="https://www.iastate.edu/" target="_blank" rel="noopener">Iowa State University</a> · Ames, Iowa</div>
+    <div class="mk-meta-row">
+      <span class="mk-meta-chip">GPA: 3.95/4</span>
+    </div>
   </div>
 
   <div class="mk-timeline-item" data-reveal>
