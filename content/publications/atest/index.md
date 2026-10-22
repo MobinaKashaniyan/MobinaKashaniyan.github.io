@@ -1,5 +1,6 @@
 ---
 title: "ATEST: Adaptive Resource-Aware Test-Time Scaling for LLM Inference"
+slug: atest
 date: 2026-10-18
 publishDate: 2026-10-18
 draft: false
