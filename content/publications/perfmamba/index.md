@@ -15,6 +15,7 @@ publication: "In *International Symposium on Benchmarking, Measuring and Optimiz
 conference: "International Symposium on Benchmarking, Measuring and Optimization"
 publisher: "Springer, Singapore"
 pages: "27–44"
+arxiv: "2511.22849"
 url_pdf: "https://mobinakashaniyan.github.io/papers/perfmamba-performance-analysis-pruning-selective-state-space-models.pdf"
 abstract: "Recent advances in sequence modeling have introduced selective state space models as promising alternatives to Transformer architectures, offering theoretical computational efficiency and sequence processing advantages. However, a comprehensive understanding of selective state space models in runtime behavior, resource utilization, memory access patterns, I/O characteristics, and scaling behavior remains limited. This paper presents PerfMamba, a performance analysis and pruning study of Mamba-1 and Mamba-2. The work systematically profiles selective state space models across sequence lengths from 64 to 16,384 tokens and analyzes computation patterns, memory behavior, I/O characteristics, and scaling properties. Based on these insights, PerfMamba proposes a pruning technique that selectively removes low-activity states within the SSM component, improving throughput and reducing memory usage while maintaining accuracy within a moderate pruning regime."
 summary: "PerfMamba analyzes the runtime behavior, resource utilization, memory access patterns, scaling properties, and pruning opportunities of Mamba-1 and Mamba-2 selective state space models."
@@ -57,6 +58,10 @@ links:
     name: PDF
     url: "https://mobinakashaniyan.github.io/papers/perfmamba-performance-analysis-pruning-selective-state-space-models.pdf"
   - icon_pack: fas
+    icon: link
+    name: arXiv
+    url: "https://arxiv.org/abs/2511.22849"
+  - icon_pack: fas
     icon: newspaper
     name: Research Summary
     url: "https://mobinakashaniyan.github.io/post/perfmamba-performance-analysis-pruning/"
@@ -76,4 +81,17 @@ This work is relevant to researchers working on **Mamba, selective state space m
 
 **Citation:**
 
-Al Asif, A., Kashaniyan, M., Yu, S., Muñoz, J. P., & Jannesari, A. (2026). PerfMamba: Performance analysis and pruning of selective state space models. In *International Symposium on Benchmarking, Measuring and Optimization* (pp. 27–44). Springer, Singapore.
+Al Asif, A., Kashaniyan, M., Yu, S., Muñoz, J. P., & Jannesari, A. (2026). PerfMamba: Performance analysis and pruning of selective state space models. In *International Symposium on Benchmarking, Measuring and Optimization* (pp. 27–44). Springer, Singapore. https://arxiv.org/abs/2511.22849
+
+```bibtex
+@inproceedings{alasif2026perfmamba,
+  title     = {PerfMamba: Performance Analysis and Pruning of Selective State Space Models},
+  author    = {Al Asif, Abdullah and Kashaniyan, Mobina and Yu, Sixing and Mu{\~n}oz, Juan Pablo and Jannesari, Ali},
+  booktitle = {International Symposium on Benchmarking, Measuring and Optimization},
+  pages     = {27--44},
+  year      = {2026},
+  publisher = {Springer},
+  note      = {arXiv:2511.22849},
+  url       = {https://arxiv.org/abs/2511.22849}
+}
+```

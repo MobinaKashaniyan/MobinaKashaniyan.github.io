@@ -12,6 +12,7 @@ publication: "*Journal of Ambient Intelligence and Smart Environments*, SAGE Pub
 journal: "Journal of Ambient Intelligence and Smart Environments"
 publisher: "SAGE Publications"
 doi: "10.1177/18761364261459585"
+arxiv: "2607.15511"
 url_pdf: "https://mobinakashaniyan.github.io/papers/an-auto-scaling-approach-serverless-environments-multi-expert-consensus.pdf"
 abstract: "Serverless computing offers automatic resource management and pay-per-use execution, but auto-scaling remains challenging due to cold-start latency, inter-function dependencies, and highly dynamic workloads. This paper presents a dependency-aware auto-scaling framework for Function-as-a-Service environments based on a multi-expert consensus mechanism. The approach combines directed dependency graphs, bottleneck identification using degree centrality, short-horizon workload forecasting, ensemble learning, and cost-aware resource allocation to improve scaling decisions under dynamic serverless workloads."
 summary: "A dependency-aware auto-scaling framework for serverless computing using multi-expert consensus, workload forecasting, ensemble learning, and cost-aware resource allocation."
@@ -50,6 +51,10 @@ links:
     icon: link
     name: Official SAGE Page
     url: "https://journals.sagepub.com/doi/10.1177/18761364261459585"
+  - icon_pack: fas
+    icon: link
+    name: arXiv
+    url: "https://arxiv.org/abs/2607.15511"
   - icon_pack: ai
     icon: google-scholar
     name: Google Scholar
@@ -71,3 +76,16 @@ The proposed framework combines multiple lightweight predictive models through a
 **Citation:**
 
 Kashaniyan, M., Ashtiani, M., & Ghassemi, A. (2026). An auto-scaling approach for serverless environments based on a multi-expert consensus mechanism. *Journal of Ambient Intelligence and Smart Environments*. https://doi.org/10.1177/18761364261459585
+
+```bibtex
+@article{kashaniyan2026serverless,
+  title   = {An Auto-Scaling Approach for Serverless Environments Based on a Multi-Expert Consensus Mechanism},
+  author  = {Kashaniyan, Mobina and Ashtiani, Mehrdad and Ghassemi, Amirhossein},
+  journal = {Journal of Ambient Intelligence and Smart Environments},
+  year    = {2026},
+  publisher = {SAGE Publications},
+  doi     = {10.1177/18761364261459585},
+  note    = {arXiv:2607.15511},
+  url     = {https://arxiv.org/abs/2607.15511}
+}
+```

@@ -12,6 +12,7 @@ publication: "*arXiv preprint arXiv:2608.03961*, 2026"
 publisher: "arXiv"
 
 doi: "10.48550/arXiv.2608.03961"
+arxiv: "2608.03961"
 url_pdf: "https://mobinakashaniyan.github.io/publications/interpretable-adaptive-sampling/interpretable-adaptive-sampling-llm-test-time-scaling.pdf"
 
 
@@ -82,3 +83,16 @@ This work is relevant to LLM test-time scaling, adaptive inference, compute-effi
 ## Citation
 
 Kashaniyan, M., & Jannesari, A. (2026). Interpretable adaptive sampling for LLM test-time scaling. arXiv preprint arXiv:2608.03961. https://doi.org/10.48550/arXiv.2608.03961
+
+```bibtex
+@misc{kashaniyan2026adaptive,
+  title         = {Interpretable Adaptive Sampling for {LLM} Test-Time Scaling},
+  author        = {Kashaniyan, Mobina and Jannesari, Ali},
+  year          = {2026},
+  eprint        = {2608.03961},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  doi           = {10.48550/arXiv.2608.03961},
+  url           = {https://arxiv.org/abs/2608.03961}
+}
+```

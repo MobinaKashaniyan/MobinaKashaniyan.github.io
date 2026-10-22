@@ -12,6 +12,7 @@ publication: "In *2025 15th International Conference on Computer and Knowledge E
 conference: "2025 15th International Conference on Computer and Knowledge Engineering (ICCKE)"
 publisher: "IEEE"
 doi: "10.1109/ICCKE68588.2025.11273810"
+arxiv: "2607.15509"
 url_pdf: "https://mobinakashaniyan.github.io/papers/llm-driven-automl-cross-lingual-handwritten-ocr.pdf"
 abstract: "Handwritten text recognition across diverse scripts remains a challenging problem in machine learning because each language and writing system introduces unique visual structures, character shapes, and recognition demands. This paper introduces a fully automated and cross-lingual LLM-driven AutoML pipeline for handwritten optical character recognition. The proposed closed-loop neural architecture search framework uses large language models, including GPT-5, GPT-4o, and Claude Sonnet 4, to independently generate, evaluate, and refine neural network architectures for handwritten OCR without manual intervention, domain-specific preprocessing, or human model selection. The approach is evaluated on Arabic, English, and Persian handwritten text recognition, demonstrating its relevance to multilingual OCR, low-resource language processing, document intelligence, neural architecture search, and LLM-based automated model design."
 summary: "A fully automated LLM-driven AutoML framework for cross-lingual handwritten OCR using closed-loop neural architecture search with GPT-5, GPT-4o, and Claude Sonnet 4 across Arabic, English, and Persian scripts."
@@ -50,6 +51,10 @@ links:
     icon: link
     name: IEEE Xplore
     url: "https://ieeexplore.ieee.org/abstract/document/11273810"
+  - icon_pack: fas
+    icon: link
+    name: arXiv
+    url: "https://arxiv.org/abs/2607.15509"
   - icon_pack: ai
     icon: google-scholar
     name: Google Scholar
@@ -73,3 +78,17 @@ This work is relevant to researchers working on **optical character recognition,
 **Citation:**
 
 Kashaniyan, M., Ghassemi, A., & Mozayani, N. (2025). LLM-driven AutoML for cross-lingual handwritten OCR: Closed-loop neural architecture search with GPT-5, GPT-4o, and Claude Sonnet 4. In *2025 15th International Conference on Computer and Knowledge Engineering (ICCKE)*, IEEE, pp. 1–6. https://doi.org/10.1109/ICCKE68588.2025.11273810
+
+```bibtex
+@inproceedings{kashaniyan2025ocr,
+  title     = {LLM-Driven AutoML for Cross-Lingual Handwritten OCR: Closed-Loop Neural Architecture Search with GPT-5, GPT-4o, and Claude Sonnet 4},
+  author    = {Kashaniyan, Mobina and Ghassemi, Amirhossein and Mozayani, Nasser},
+  booktitle = {2025 15th International Conference on Computer and Knowledge Engineering (ICCKE)},
+  pages     = {1--6},
+  year      = {2025},
+  publisher = {IEEE},
+  doi       = {10.1109/ICCKE68588.2025.11273810},
+  note      = {arXiv:2607.15509},
+  url       = {https://arxiv.org/abs/2607.15509}
+}
+```
