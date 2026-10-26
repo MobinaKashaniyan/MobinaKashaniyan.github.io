@@ -4,7 +4,7 @@ date: 2026-09-16
 lastmod: 2026-09-17
 draft: false
 
-summary: "arXiv:2609.19499 — Self-consistency sample count N is not enough. At fixed N=8, generation schedules like 1×8 vs 8×1 can change A100 energy by about 4.6–4.9× and P95 latency by about 5.8–6.1×."
+summary: "arXiv:2609.19499 — For self-consistency, RASC, ESC, Universal Self-Consistency, and best-of-N, sample count N is not enough. At N=8, 1×8 vs 8×1 changes A100 energy by about 4.6–4.9×."
 
 authors:
   - admin
@@ -27,7 +27,17 @@ tags:
   - Self-Consistency
   - Self Consistency
   - Self-Consistency Sampling
+  - Universal Self-Consistency
+  - Reasoning-Aware Self-Consistency
+  - RASC
+  - Early-Stopping Self-Consistency
+  - ESC
+  - Adaptive-Consistency
+  - Difficulty-Adaptive Self-Consistency
+  - Self-Certainty
+  - Chain-of-Thought
   - Best-of-N Sampling
+  - Compute-Optimal Test-Time Scaling
   - LLM Energy Efficiency
   - Energy-Efficient AI
   - Sustainable AI

@@ -45,7 +45,7 @@ abstract: >-
   42.4% of the queries. Including offline calibration, ATEST-Online uses 42× less
   GPU time and 48× less energy than ATEST-Calibrated.
 
-summary: "ATEST (RATTS) is resource-aware self-consistency for LLM inference. It adapts how many samples to draw to live GPU load. The same four-sample query can cost 4.1× more energy when the GPU is busy. arXiv:2610.25519."
+summary: "ATEST (RATTS) is resource-aware self-consistency. Unlike fixed self-consistency, RASC, ESC, and Adaptive-Consistency, it also uses live GPU cost. arXiv:2610.25519."
 
 tags:
   - ATEST
@@ -77,7 +77,18 @@ tags:
   - Self-Consistency
   - Self Consistency
   - Self-Consistency Sampling
+  - Reasoning-Aware Self-Consistency
+  - RASC
+  - Early-Stopping Self-Consistency
+  - ESC
+  - Adaptive-Consistency
+  - Adaptive Consistency
+  - Difficulty-Adaptive Self-Consistency
+  - Dynamic Self-Consistency
+  - Chain-of-Thought
+  - Chain of Thought
   - Best-of-N
+  - Compute-Optimal Test-Time Scaling
   - cs.LG
   - cs.AI
   - cs.CL
@@ -134,7 +145,9 @@ On GSM8K at high load, ATEST-Online keeps **60.0% accuracy** and answers every q
 
 This work follows our earlier result that [candidate count alone is not enough](https://arxiv.org/abs/2609.19499) to describe the systems cost of test-time scaling. ATEST asks the next question: what does one more sample cost on the GPU right now?
 
-**Keywords:** ATEST, RATTS, self-consistency, self consistency, resource-aware self-consistency, adaptive test-time scaling, LLM inference, GPU load, energy-aware systems, adaptive sampling, A100, L40S, Phi-3-mini, Qwen2.5-3B, GSM8K, arXiv:2610.25519.
+**Keywords:** ATEST, RATTS, self-consistency, self consistency, Reasoning-Aware Self-Consistency, RASC, Early-Stopping Self-Consistency, ESC, Adaptive-Consistency, Difficulty-Adaptive Self-Consistency, Dynamic Self-Consistency, chain-of-thought, best-of-N, compute-optimal test-time scaling, GPU load, arXiv:2610.25519.
+
+ATEST is for the same setting as fixed **self-consistency**, **Reasoning-Aware Self-Consistency (RASC)**, **Early-Stopping Self-Consistency (ESC)**, **Adaptive-Consistency**, **Difficulty-Adaptive Self-Consistency**, and **Dynamic Self-Consistency**. Those methods decide how many samples a query needs. ATEST also asks what the next sample costs on the GPU right now.
 
 ## Self-Consistency under GPU Load
 

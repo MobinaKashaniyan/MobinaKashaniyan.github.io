@@ -3,7 +3,7 @@ title: "Interpretable Adaptive Sampling for LLM Test-Time Scaling and Test-Time 
 date: 2026-08-04
 draft: false
 
-summary: "Interpretable adaptive self-consistency for LLM test-time scaling. A fuzzy controller uses prompt complexity and model confidence to choose how many self-consistency samples each prompt receives."
+summary: "Interpretable adaptive self-consistency versus best-of-N, self-certainty, majority voting, and compute-optimal test-time scaling. Related methods include RASC, ESC, and Adaptive-Consistency."
 
 authors:
   - admin
@@ -25,6 +25,17 @@ tags:
   - Self Consistency
   - Self-Consistency Sampling
   - Adaptive Self-Consistency
+  - Reasoning-Aware Self-Consistency
+  - RASC
+  - Early-Stopping Self-Consistency
+  - ESC
+  - Adaptive-Consistency
+  - Difficulty-Adaptive Self-Consistency
+  - Self-Certainty
+  - Majority Voting
+  - Borda Count
+  - Compute-Optimal Test-Time Scaling
+  - Chain-of-Thought
   - Inference-Time Sampling
   - Interpretable AI
   - Fuzzy Controller

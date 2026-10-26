@@ -44,7 +44,7 @@ abstract: >-
   efficient. Evaluations should therefore report not only candidate count and
   accuracy, but also generation schedule and GPU-level systems metrics.
 
-summary: "arXiv:2609.19499 — For self-consistency, candidate count N is not enough. At fixed N, how samples are batched can change LLM test-time scaling energy and latency by several times on A100 GPUs."
+summary: "arXiv:2609.19499 — For self-consistency, RASC, ESC, and best-of-N, candidate count N is not enough. Batching the same N can change A100 energy and latency by several times."
 
 tags:
   - arXiv:2609.19499
@@ -60,7 +60,17 @@ tags:
   - Self-Consistency
   - Self Consistency
   - Self-Consistency Sampling
+  - Universal Self-Consistency
+  - Reasoning-Aware Self-Consistency
+  - RASC
+  - Early-Stopping Self-Consistency
+  - ESC
+  - Adaptive-Consistency
+  - Difficulty-Adaptive Self-Consistency
+  - Self-Certainty
+  - Chain-of-Thought
   - Best-of-N
+  - Compute-Optimal Test-Time Scaling
   - LLM Energy Efficiency
   - GPU Energy Measurement
   - GPU Inference
@@ -134,7 +144,9 @@ This work was accepted to the **3rd IEEE/ACM SC26 Workshop on Energy Efficiency 
 
 It is relevant to researchers working on **test-time scaling, test-time compute, candidate generation, batched LLM inference, GPU energy measurement, sustainable AI, green AI, high-performance computing, distributed/parallel computing, and efficient large language model systems**.
 
-**Keywords:** arXiv:2609.19499, self-consistency, self consistency, LLM test-time scaling, test-time compute, candidate-generation strategy, generation schedule, batched inference, multi-candidate sampling, best-of-N, GPU energy, energy-efficient AI, sustainable AI, SC26, EESP, high-performance computing, A100, GSM8K, SciQ, cs.LG, cs.DC, cs.PF.
+**Keywords:** arXiv:2609.19499, self-consistency, self consistency, Universal Self-Consistency, Reasoning-Aware Self-Consistency, RASC, Early-Stopping Self-Consistency, ESC, Adaptive-Consistency, Difficulty-Adaptive Self-Consistency, best-of-N, self-certainty, chain-of-thought, compute-optimal test-time scaling, generation schedule, GPU energy, A100, GSM8K.
+
+The energy result applies to multi-sample methods that keep a candidate count N, including **self-consistency**, **Universal Self-Consistency**, **Reasoning-Aware Self-Consistency (RASC)**, **Early-Stopping Self-Consistency (ESC)**, **Adaptive-Consistency**, **Difficulty-Adaptive Self-Consistency**, **best-of-N**, and **self-certainty** selection. The same N can be one batched call or several smaller calls, and those schedules do not have the same GPU energy or latency.
 
 ## Self-Consistency and Generation Schedule
 

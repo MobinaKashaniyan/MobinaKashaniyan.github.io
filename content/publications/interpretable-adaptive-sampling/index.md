@@ -37,9 +37,9 @@ abstract: >-
   practical direction for more efficient test-time reasoning in large
   language models.
 
-summary: "Interpretable adaptive sampling for self-consistency. A fuzzy controller uses prompt complexity and model confidence to choose how many self-consistency samples each prompt receives."
+summary: "Interpretable adaptive self-consistency. A fuzzy controller sets the sample budget, compared with best-of-N, self-certainty, majority voting, and compute-optimal test-time scaling."
 
-tags: ["LLM Test-Time Scaling", "Adaptive Sampling", "Self-Consistency", "Self Consistency", "Self-Consistency Sampling", "Inference-Time Compute", "Efficient LLM Inference", "Large Language Models", "Test-Time Reasoning", "Interpretable AI", "Fuzzy Logic", "Best-of-N Sampling", "Adaptive Computation"]
+tags: ["LLM Test-Time Scaling", "Adaptive Sampling", "Self-Consistency", "Self Consistency", "Self-Consistency Sampling", "Reasoning-Aware Self-Consistency", "RASC", "Early-Stopping Self-Consistency", "ESC", "Adaptive-Consistency", "Difficulty-Adaptive Self-Consistency", "Best-of-N", "Best-of-N Sampling", "Self-Certainty", "Majority Voting", "Borda Count", "Compute-Optimal Test-Time Scaling", "Chain-of-Thought", "Inference-Time Compute", "Efficient LLM Inference", "Large Language Models", "Test-Time Reasoning", "Interpretable AI", "Fuzzy Logic", "Adaptive Computation"]
 
 categories: ["Preprint", "Artificial Intelligence", "Large Language Models"]
 
@@ -76,7 +76,9 @@ The approach is evaluated against fixed best-of-N sampling, compute-aware scalin
 
 This work is relevant to LLM test-time scaling, adaptive inference, compute-efficient AI, interpretable sampling, self-consistency, and efficient large language model reasoning.
 
-**Keywords:** self-consistency, self consistency, adaptive self-consistency, LLM test-time scaling, adaptive sampling, inference-time compute, efficient LLM inference, interpretable AI, fuzzy control, best-of-N sampling, adaptive computation, mathematical reasoning.
+**Keywords:** self-consistency, self consistency, adaptive self-consistency, Reasoning-Aware Self-Consistency, RASC, Early-Stopping Self-Consistency, ESC, Adaptive-Consistency, Difficulty-Adaptive Self-Consistency, best-of-N, self-certainty, majority voting, Borda count, compute-optimal test-time scaling, chain-of-thought, interpretable AI, fuzzy control.
+
+This adaptive sampler is for **self-consistency**. The experiments compare it with **best-of-N**, **self-certainty**, **self-certainty with Borda aggregation**, **majority voting**, and **compute-optimal test-time scaling**. It is in the same family as **RASC**, **Early-Stopping Self-Consistency (ESC)**, **Adaptive-Consistency**, and **Difficulty-Adaptive Self-Consistency**, which also change how many reasoning paths are sampled.
 
 ## Adaptive Self-Consistency
 

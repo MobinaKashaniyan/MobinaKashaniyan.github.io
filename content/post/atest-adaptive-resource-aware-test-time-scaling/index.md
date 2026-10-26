@@ -3,7 +3,7 @@ title: "ATEST / RATTS: Adaptive Resource-Aware Test-Time Scaling for LLM Inferen
 date: 2026-10-18
 draft: false
 
-summary: "ATEST (RATTS) makes self-consistency resource-aware. The same four-sample self-consistency query can use 4.1× more energy when the GPU is busy. ATEST-Online answers every query within budget. arXiv:2610.25519."
+summary: "ATEST (RATTS) makes self-consistency resource-aware, unlike fixed self-consistency, RASC, ESC, and Adaptive-Consistency. The same four-sample query can use 4.1× more energy on a busy GPU. arXiv:2610.25519."
 
 authors:
   - admin
@@ -26,8 +26,16 @@ tags:
   - ATEST-Calibrated
   - Self-Consistency
   - Self Consistency
-  - Self-Consistency Sampling
+  - Reasoning-Aware Self-Consistency
+  - RASC
+  - Early-Stopping Self-Consistency
+  - ESC
+  - Adaptive-Consistency
+  - Difficulty-Adaptive Self-Consistency
+  - Dynamic Self-Consistency
+  - Chain-of-Thought
   - Best-of-N Sampling
+  - Compute-Optimal Test-Time Scaling
   - LLM Energy Efficiency
   - Sustainable AI
   - Green AI
